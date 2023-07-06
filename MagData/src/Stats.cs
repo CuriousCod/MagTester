@@ -27,6 +27,9 @@ public class Stats
         Mind,
     }
 
+    // For serialization
+    public Stats(){}
+
     public Stats(int tier)
     {
         Tier = tier;

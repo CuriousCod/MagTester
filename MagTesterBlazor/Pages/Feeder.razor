@@ -1,8 +1,7 @@
 @using MagData
+@inject NavigationManager NavigationManager
 
 @page "/"
-
-<link href="css/bootstrap.min.css" rel="stylesheet" />
 
 <div class="base">
 
@@ -37,6 +36,7 @@
 
 <h2>Stats</h2>
 <p>NAME: @_mag.Name</p>
+<p>FEED TABLE: @_mag.FeedTable.Index</p>
 <p>LVL: @_mag.Stats.Level</p>
 
 <table class="stat-table">
@@ -87,7 +87,22 @@
 
     private string buildDate = string.Empty;
 
-    private Mag _mag = new Mag(Mag.GetDefaultMag());
+    private Mag? _mag = Mag.GetDefaultMag();
+
+    protected override async Task OnInitializedAsync()
+    {
+        var httpClient = new HttpClient();
+        httpClient.BaseAddress = new Uri(NavigationManager.BaseUri);
+        var tables = await httpClient.GetFromJsonAsync<FeedTablesContainer>("resources/FeedTables.json");
+
+        if (tables == null)
+        {
+            return;
+        }
+
+        FeedTables.SetFeedTables(tables.FeedTables);
+        _mag = new Mag(Mag.GetDefaultMag());
+    }
 
     private void Feed()
     {

@@ -8,11 +8,11 @@ public class Mags
     {
         var magList = new List<Mag>();
 
-        magList.Add(new Mag(Names.Mag, Classes.None, new Stats(0), FeedTables.FeedTable00));
+        magList.Add(new Mag(Names.Mag, Classes.None, new Stats(0), FeedTables.GetFeedTable(0)));
 
-        magList.Add(new Mag(Names.Varuna, Classes.Hunter, new Stats(1), FeedTables.FeedTable01));
-        magList.Add(new Mag(Names.Kalki, Classes.Ranger, new Stats(1), FeedTables.FeedTable01));
-        magList.Add(new Mag(Names.Vritra, Classes.Force, new Stats(1), FeedTables.FeedTable01));
+        magList.Add(new Mag(Names.Varuna, Classes.Hunter, new Stats(1), FeedTables.GetFeedTable(1)));
+        magList.Add(new Mag(Names.Kalki, Classes.Ranger, new Stats(1), FeedTables.GetFeedTable(1)));
+        magList.Add(new Mag(Names.Vritra, Classes.Force, new Stats(1), FeedTables.GetFeedTable(1)));
 
         return magList;
     }

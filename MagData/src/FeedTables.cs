@@ -1,7 +1,10 @@
+using System.Text.Json;
+
 namespace MagData;
 
 public class FeedTable
 {
+    public int Index => FeedTables.TableIndex(this); // TODO Optimize this
     public List<ItemData> ItemFeedData { get; set; }
     public FeedTable(List<ItemData> itemFeedData)
     {
@@ -33,29 +36,31 @@ public class FeedTable
     }
 }
 
+public class FeedTablesContainer
+{
+    public List<FeedTable> FeedTables { get; set; }
+}
+
 public static class FeedTables
 {
-    public static FeedTable FeedTable00 = GetFeedTable(0);
-    public static FeedTable FeedTable01 = GetFeedTable(1);
-    public static FeedTable FeedTable02;
-    public static FeedTable FeedTable03;
-    public static FeedTable FeedTable04;
-    public static FeedTable FeedTable05;
-    public static FeedTable FeedTable06;
-    public static FeedTable FeedTable07;
-    public static FeedTable FeedTable08;
+    private static List<FeedTable> _feedTablesList = new();
 
-    public static FeedTable GetFeedTable(int tableIndex)
+    private static List<FeedTable> GetFeedTables()
     {
-        return tableIndex switch
+        const string feedTablesFile = "resources/FeedTables.json";
+        try
         {
-            0 => FeedTableValues00(),
-            1 => FeedTableValues01(),
-            _ => throw new ArgumentOutOfRangeException(nameof(tableIndex), tableIndex, null)
-        };
+            var feedTablesJson = File.ReadAllText(feedTablesFile);
+            var feedTablesContainer = JsonSerializer.Deserialize<FeedTablesContainer>(feedTablesJson);
+            return feedTablesContainer?.FeedTables ?? new List<FeedTable>();
+        }
+        catch (IOException e)
+        {
+            return new List<FeedTable>();
+        }
     }
 
-    private static FeedTable FeedTableValues00()
+    private static FeedTable DefaultFeedTable()
     {
         var monomate = new FeedTable.ItemData(Items.Monomate, new Stats(5, 40, 5, 0, 3, 3));
         var dimate = new FeedTable.ItemData(Items.Dimate, new Stats(10, 45, 5, 0, 3, 3));
@@ -87,36 +92,34 @@ public static class FeedTables
         return new FeedTable(itemData);
     }
 
-    private static FeedTable FeedTableValues01()
+    public static FeedTable GetFeedTable(int tableIndex)
     {
-        var monomate = new FeedTable.ItemData(Items.Monomate, new Stats(5, 10, 0, -1, 0, 0));
-        var dimate = new FeedTable.ItemData(Items.Dimate, new Stats(6, 15, 3, -3, 2, 1));
-        var trimate = new FeedTable.ItemData(Items.Trimate, new Stats(12, 21, 4, -7, 3, 2));
-        var monofluid = new FeedTable.ItemData(Items.Monofluid, new Stats(5, 0, 0, 8, 0, 0));
-        var difluid = new FeedTable.ItemData(Items.Difluid, new Stats(7, 0, 3, 13, 2, 1));
-        var trifluid = new FeedTable.ItemData(Items.Trifluid, new Stats(7, -7, 6, 19, 3, 2));
-        var antidote = new FeedTable.ItemData(Items.Antidote, new Stats(0, 5, 15, 0, 0, 1));
-        var antiparalysis = new FeedTable.ItemData(Items.Antiparalysis, new Stats(-1, 0, 14, 5, 2, 0));
-        var solAtomizer = new FeedTable.ItemData(Items.SolAtomizer, new Stats(10, 11, 8, 0, -2, 2));
-        var moonAtomizer = new FeedTable.ItemData(Items.MoonAtomizer, new Stats(9, 0, 9, 11, 3, -2));
-        var starAtomizer = new FeedTable.ItemData(Items.StarAtomizer, new Stats(14, 9, 18, 11, 4, 3));
-
-        var itemData = new List<FeedTable.ItemData>
+        if (_feedTablesList.Count == 0)
         {
-            monomate,
-            dimate,
-            trimate,
-            monofluid,
-            difluid,
-            trifluid,
-            antidote,
-            antiparalysis,
-            solAtomizer,
-            moonAtomizer,
-            starAtomizer,
-        };
+            _feedTablesList = GetFeedTables();
+        }
 
-        return new FeedTable(itemData);
+        if (_feedTablesList.Count == 0)
+        {
+            return tableIndex == 0 ? DefaultFeedTable() : new FeedTable(new List<FeedTable.ItemData>());
+        }
+
+        return tableIndex switch
+        {
+            0 => _feedTablesList[0],
+            1 => _feedTablesList[1],
+            _ => throw new ArgumentOutOfRangeException(nameof(tableIndex), tableIndex, null)
+        };
     }
 
+    public static bool SetFeedTables(List<FeedTable> feedTables)
+    {
+        _feedTablesList = feedTables;
+        return true;
+    }
+
+    public static int TableIndex(FeedTable feedTable)
+    {
+        return _feedTablesList.IndexOf(feedTable);
+    }
 }

@@ -136,7 +136,7 @@ public class Mag
         const Names name = Names.Mag;
         const Classes requiredClass = Classes.None;
         var stats = new Stats(0, 0, 0, 0, 0, 0, 0, 0);
-        var feedTable = FeedTables.FeedTable00;
+        var feedTable = FeedTables.GetFeedTable(0);
 
         return new Mag(name, requiredClass, stats, feedTable);
     }
