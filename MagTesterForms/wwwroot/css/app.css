@@ -1,0 +1,72 @@
+html, body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background: #262626;
+    color: #ffce11;
+}
+
+.base {
+    margin: 1%;
+    color: #ffce11;
+    background: #262626;
+}
+
+.stat-table {
+    width: 25%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: 1px solid #ffce11;
+    margin-bottom: 1rem;
+}
+
+.stat-table:nth-child(2n) {
+    background: #1c1c1c;
+}
+
+.stat-table:not(:last-child) {
+    margin-bottom: 1rem;
+}
+
+h1:focus {
+    outline: none;
+}
+
+a, .btn-link {
+    color: #0071c1;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
+.valid.modified:not([type=checkbox]) {
+    outline: 1px solid #26b050;
+}
+
+.invalid {
+    outline: 1px solid red;
+}
+
+.validation-message {
+    color: red;
+}
+
+#blazor-error-ui {
+    background: lightyellow;
+    bottom: 0;
+    box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.2);
+    display: none;
+    left: 0;
+    padding: 0.6rem 1.25rem 0.7rem 1.25rem;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+#blazor-error-ui .dismiss {
+    cursor: pointer;
+    position: absolute;
+    right: 0.75rem;
+    top: 0.5rem;
+}

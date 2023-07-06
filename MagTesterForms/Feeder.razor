@@ -1,0 +1,141 @@
+@using MagData
+
+<link href="css/bootstrap.min.css" rel="stylesheet" />
+
+<div class="base">
+
+<h1>Feeder</h1>
+
+<select class="form-control" @bind="SelectedClass">
+    <option value="">Select class</option>
+    @foreach (var item in Classes)
+    {
+        <option @key=item>@item</option>
+    }
+</select>
+
+@classText
+
+<p></p>
+
+<select class="form-control" @bind="SelectedItem">
+    <option value="">Select an item</option>
+    @foreach (var item in FeedableItems)
+    {
+        <option @key=item>@item</option>
+    }
+</select>
+
+<p></p>
+
+<button class="btn btn-primary" @onclick="Feed">Feed</button>
+<button class="btn btn-primary" @onclick="() => FeedMultiple(10)">Feed 10</button>
+
+@itemText
+
+<p>Stats</p>
+<p>NAME: @_mag.Name</p>
+<p>LVL: @_mag.Stats.Level</p>
+
+<table class="stat-table">
+    <tr>
+        <td>POW</td>
+        <td>@_mag.Stats.Pow</td>
+    </tr>
+    <tr>
+        <td>DEF</td>
+        <td>@_mag.Stats.Def</td>
+    </tr>
+    <tr>
+        <td>DEX</td>
+        <td>@_mag.Stats.Dex</td>
+    </tr>
+    <tr>
+        <td>MIND</td>
+        <td>@_mag.Stats.Mind</td>
+    </tr>
+    <tr>
+        <td>SYNCHRO</td>
+        <td>@_mag.Stats.Synchro</td>
+    </tr>
+    <tr>
+        <td>IQ</td>
+        <td>@_mag.Stats.Iq</td>
+    </tr>
+</table>
+
+<button class="btn btn-primary" @onclick="Reset">Reset</button>
+
+<p></p><br/>
+
+<p>@buildDate</p>
+
+</div>
+
+@code {
+
+    private List<string> Classes = Mag.GetClassNames();
+    private List<string> FeedableItems = Mag.GetFeedItemNames();
+
+    private string SelectedItem { get; set; }
+    private string SelectedClass { get; set; }
+
+    private string classText = string.Empty;
+    private string itemText = string.Empty;
+
+    private string buildDate = Version.GetBuildDate();
+
+    private Mag _mag = new Mag(Mag.GetDefaultMag());
+
+    private void Feed()
+    {
+        classText = string.Empty;
+        itemText = string.Empty;
+
+        if (string.IsNullOrEmpty(SelectedClass))
+        {
+            classText = "Please select a class";
+            return;
+        }
+
+        if (string.IsNullOrEmpty(SelectedItem))
+        {
+            itemText = "Please select an item";
+            return;
+        }
+
+        var index = FeedableItems.IndexOf(SelectedItem);
+
+        if (index == -1)
+        {
+            itemText = "Please select an item";
+            return;
+        }
+
+        var classIndex = Classes.IndexOf(SelectedClass);
+
+        if (classIndex == -1)
+        {
+            classText = "Please select a class";
+            return;
+        }
+
+        var classType = (Classes)classIndex;
+
+        var result = _mag.Feed((Items)index, classType);
+    }
+
+    private void FeedMultiple(int amount)
+    {
+        for (var i = 0; i < amount; i++)
+        {
+            Feed();
+        }
+    }
+
+    private void Reset()
+    {
+        _mag = new Mag(Mag.GetDefaultMag());
+    }
+
+}

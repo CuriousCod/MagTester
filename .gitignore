@@ -1,0 +1,10 @@
+MagData/bin/
+MagData/obj/
+
+MagTesterBlazor/bin/
+MagTesterBlazor/obj/
+
+MagTesterForms/bin/
+MagTesterForms/obj/
+
+.idea
