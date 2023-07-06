@@ -1,0 +1,32 @@
+html, body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background: #262626;
+    color: #ffce11;
+}
+
+.base {
+    margin: 1%;
+    color: #ffce11;
+    background: #262626;
+}
+
+.stat-table {
+    width: 25%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: 1px solid #ffce11;
+    margin-bottom: 1rem;
+}
+
+.stat-table:nth-child(2n) {
+    background: #1c1c1c;
+}
+
+.stat-table:not(:last-child) {
+    margin-bottom: 1rem;
+}
+
+option {
+    background: #262626;
+    color: #ffce11;
+}
