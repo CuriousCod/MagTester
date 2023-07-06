@@ -26,6 +26,11 @@ html, body {
     margin-bottom: 1rem;
 }
 
+select {
+    background: #262626;
+    color: #ffce11;
+}
+
 option {
     background: #262626;
     color: #ffce11;

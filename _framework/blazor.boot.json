@@ -8,7 +8,7 @@
   "resources": {
     "assembly": {
       "MagData.dll": "sha256-vB43CGIkOkCfSD6yPPhRKDnkcfTSUMfCL0aiuKFDY4M=",
-      "MagTesterBlazor.dll": "sha256-pzQp0IqO4c80HtXoZbBs6sbmE3HawyxSqwZ14\/aoCUA=",
+      "MagTesterBlazor.dll": "sha256-MHHxEUxwiv9eVdvM9JiIcHgOoeWWT3EPMNxYax2okds=",
       "Microsoft.AspNetCore.Components.dll": "sha256-2FgymUkihqHIAervz0SMTs1ztEnc0Fpg1WtDOf1AO74=",
       "Microsoft.AspNetCore.Components.Web.dll": "sha256-+B+Dw0exFpLLKnjfJM4i3\/oCk0S9vAPAWW4+uwMs5h8=",
       "Microsoft.AspNetCore.Components.WebAssembly.dll": "sha256-I3hivE2GUCLdJhJ9KPcDlOvhCiiPRvVPj+IRM0sgm8o=",
