@@ -37,32 +37,36 @@
 <h2>Stats</h2>
 <p>NAME: @_mag.Name</p>
 <p>FEED TABLE: @_mag.FeedTable.Index</p>
-<p>LVL: @_mag.Stats.Level</p>
+<p>LVL: @_mag.MagStats.Level</p>
 
 <table class="stat-table">
     <tr>
         <td>POW</td>
-        <td>@_mag.Stats.Pow</td>
+        <td>@_mag.MagStats.Pow</td>
+        <td>@_mag.MagStats.PowCounter</td>
     </tr>
     <tr>
         <td>DEF</td>
-        <td>@_mag.Stats.Def</td>
+        <td>@_mag.MagStats.Def</td>
+        <td>@_mag.MagStats.DefCounter</td>
     </tr>
     <tr>
         <td>DEX</td>
-        <td>@_mag.Stats.Dex</td>
+        <td>@_mag.MagStats.Dex</td>
+        <td>@_mag.MagStats.DexCounter</td>
     </tr>
     <tr>
         <td>MIND</td>
-        <td>@_mag.Stats.Mind</td>
+        <td>@_mag.MagStats.Mind</td>
+        <td>@_mag.MagStats.MindCounter</td>
     </tr>
     <tr>
         <td>SYNCHRO</td>
-        <td>@_mag.Stats.Synchro</td>
+        <td>@_mag.MagStats.Synchro</td>
     </tr>
     <tr>
         <td>IQ</td>
-        <td>@_mag.Stats.Iq</td>
+        <td>@_mag.MagStats.Iq</td>
     </tr>
 </table>
 
@@ -93,7 +97,11 @@
     {
         var httpClient = new HttpClient();
         httpClient.BaseAddress = new Uri(NavigationManager.BaseUri);
-        var tables = await httpClient.GetFromJsonAsync<FeedTablesContainer>("resources/FeedTables.json");
+
+        // Prevent browser caching
+        var guid = Guid.NewGuid().ToString();
+
+        var tables = await httpClient.GetFromJsonAsync<FeedTablesContainer>($"resources/FeedTables.json?{guid}");
 
         if (tables == null)
         {
@@ -102,6 +110,7 @@
 
         FeedTables.SetFeedTables(tables.FeedTables);
         _mag = new Mag(Mag.GetDefaultMag());
+        StateHasChanged();
     }
 
     private void Feed()

@@ -14,12 +14,12 @@ public class FeedTable
     public class ItemData
     {
         public Items Item { get; set; }
-        public Stats Stats { get; set; }
+        public ItemStats ItemStats { get; set; }
 
-        public ItemData(Items item, Stats stats)
+        public ItemData(Items item, ItemStats itemStats)
         {
             Item = item;
-            Stats = stats;
+            ItemStats = itemStats;
         }
     }
 
@@ -62,17 +62,17 @@ public static class FeedTables
 
     private static FeedTable DefaultFeedTable()
     {
-        var monomate = new FeedTable.ItemData(Items.Monomate, new Stats(5, 40, 5, 0, 3, 3));
-        var dimate = new FeedTable.ItemData(Items.Dimate, new Stats(10, 45, 5, 0, 3, 3));
-        var trimate = new FeedTable.ItemData(Items.Trimate, new Stats(15, 50, 10, 0, 4, 4));
-        var monofluid = new FeedTable.ItemData(Items.Monofluid, new Stats(5, 0, 5, 40, 3, 3));
-        var difluid = new FeedTable.ItemData(Items.Difluid, new Stats(10, 0, 5, 45, 3, 3));
-        var trifluid = new FeedTable.ItemData(Items.Trifluid, new Stats(15, 0, 10, 50, 4, 4));
-        var antidote = new FeedTable.ItemData(Items.Antidote, new Stats(5, 10, 40, 0, 3, 3));
-        var antiparalysis = new FeedTable.ItemData(Items.Antiparalysis, new Stats(5, 0, 44, 10, 3, 3));
-        var solAtomizer = new FeedTable.ItemData(Items.SolAtomizer, new Stats(15, 30, 15, 25, 4, 1));
-        var moonAtomizer = new FeedTable.ItemData(Items.MoonAtomizer, new Stats(15, 25, 15, 30, 4, 1));
-        var starAtomizer = new FeedTable.ItemData(Items.StarAtomizer, new Stats(25, 25, 25, 25, 6, 5));
+        var monomate = new FeedTable.ItemData(Items.Monomate, new ItemStats(5, 40, 5, 0, 3, 3));
+        var dimate = new FeedTable.ItemData(Items.Dimate, new ItemStats(10, 45, 5, 0, 3, 3));
+        var trimate = new FeedTable.ItemData(Items.Trimate, new ItemStats(15, 50, 10, 0, 4, 4));
+        var monofluid = new FeedTable.ItemData(Items.Monofluid, new ItemStats(5, 0, 5, 40, 3, 3));
+        var difluid = new FeedTable.ItemData(Items.Difluid, new ItemStats(10, 0, 5, 45, 3, 3));
+        var trifluid = new FeedTable.ItemData(Items.Trifluid, new ItemStats(15, 0, 10, 50, 4, 4));
+        var antidote = new FeedTable.ItemData(Items.Antidote, new ItemStats(5, 10, 40, 0, 3, 3));
+        var antiparalysis = new FeedTable.ItemData(Items.Antiparalysis, new ItemStats(5, 0, 44, 10, 3, 3));
+        var solAtomizer = new FeedTable.ItemData(Items.SolAtomizer, new ItemStats(15, 30, 15, 25, 4, 1));
+        var moonAtomizer = new FeedTable.ItemData(Items.MoonAtomizer, new ItemStats(15, 25, 15, 30, 4, 1));
+        var starAtomizer = new FeedTable.ItemData(Items.StarAtomizer, new ItemStats(25, 25, 25, 25, 6, 5));
 
         var itemData = new List<FeedTable.ItemData>
         {
@@ -108,6 +108,12 @@ public static class FeedTables
         {
             0 => _feedTablesList[0],
             1 => _feedTablesList[1],
+            2 => _feedTablesList[2],
+            3 => _feedTablesList[3],
+            4 => _feedTablesList[4],
+            5 => _feedTablesList[5],
+            6 => _feedTablesList[6],
+            7 => _feedTablesList[7],
             _ => throw new ArgumentOutOfRangeException(nameof(tableIndex), tableIndex, null)
         };
     }

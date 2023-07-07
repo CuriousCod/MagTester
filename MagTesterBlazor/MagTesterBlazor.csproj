@@ -13,11 +13,12 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\MagData\MagData.csproj" />
+        <ProjectReference Include="..\MagData\MagData.csproj" />
     </ItemGroup>
 
     <ItemGroup>
-      <None Include="wwwroot\css\feeder.css" />
+        <None Include="wwwroot\css\feeder.css" />
+        <None Include="wwwroot\resources\**" CopyToOutputDirectory="PreserveNewest"/>
     </ItemGroup>
 
 </Project>

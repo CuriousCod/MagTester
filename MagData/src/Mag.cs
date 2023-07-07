@@ -4,7 +4,7 @@ public class Mag
 {
     public Names Name { get; set; }
     public Classes RequiredClass { get; set; }
-    public Stats Stats { get; set; }
+    public MagStats MagStats { get; set; }
     public FeedTable FeedTable { get; set; }
     // public Skills LearnedSkill { get; set; }
 
@@ -12,15 +12,15 @@ public class Mag
     {
         Name = mag.Name;
         RequiredClass = mag.RequiredClass;
-        Stats = mag.Stats;
+        MagStats = mag.MagStats;
         FeedTable = mag.FeedTable;
     }
 
-    public Mag(Names name, Classes requiredClass, Stats stats, FeedTable feedTable)
+    public Mag(Names name, Classes requiredClass, MagStats magStats, FeedTable feedTable)
     {
         Name = name;
         RequiredClass = requiredClass;
-        Stats = stats;
+        MagStats = magStats;
         FeedTable = feedTable;
     }
 
@@ -28,7 +28,7 @@ public class Mag
     {
         var itemGain = FeedTable.GetItemData(item);
 
-        var levelUp = Stats.AddStats(itemGain.Stats);
+        var levelUp = MagStats.AddStats(itemGain.ItemStats);
 
         if (levelUp)
         {
@@ -40,15 +40,15 @@ public class Mag
 
     private void LevelUp(Classes currentClass)
     {
-        if (Stats is {Level: 10, Tier: 0})
+        if (MagStats is {Level: 10, Tier: 0})
         {
             FirstTierEvolution(currentClass);
             return;
         }
 
-        if (Stats is {Level: 35, Tier: 1})
+        if (MagStats is {Level: 35, Tier: 1})
         {
-            // SecondTierEvolution(currentClass);
+            SecondTierEvolution();
             return;
         }
     }
@@ -73,52 +73,56 @@ public class Mag
         }
     }
 
-    private void SecondTierEvolution(Classes currentClass)
+    private void SecondTierEvolution()
     {
-        if (Stats.IsDefHighestStat())
-        {
-            throw new NotImplementedException();
-        }
-
-        Names evolutionName;
-
         switch (Name)
         {
             case Names.Varuna:
-                evolutionName = SecondTierEvolutionParser(Names.Rudra, Names.Marutah, Names.Vayu);
-                EvolveMag(evolutionName == Names.None ? Names.Rudra : evolutionName);
+                EvolveMag(SecondTierEvolutionParser(Names.Rudra, Names.Rudra, Names.Marutah, Names.Vayu));
                 break;
             case Names.Kalki:
-                evolutionName = SecondTierEvolutionParser(Names.Surya, Names.Mitra, Names.Tapas);
-                EvolveMag(evolutionName == Names.None ? Names.Mitra : evolutionName);
+                EvolveMag(SecondTierEvolutionParser(Names.Mitra, Names.Surya, Names.Mitra, Names.Tapas));
                 break;
             case Names.Vritra:
-                evolutionName = SecondTierEvolutionParser(Names.Sumba, Names.Ashvinau, Names.Namuci);
-                EvolveMag(evolutionName == Names.None ? Names.Namuci : evolutionName);
+                EvolveMag(SecondTierEvolutionParser(Names.Namuci, Names.Sumba, Names.Ashvinau, Names.Namuci));
                 break;
             default:
                 throw new ArgumentOutOfRangeException(Name.ToString());
         }
     }
 
-    private Names SecondTierEvolutionParser(Names powOption, Names dexOption, Names mindOption)
+    private Names SecondTierEvolutionParser(Names defaultOption, Names powOption, Names dexOption, Names mindOption)
     {
-        if (Stats.IsPowerHighestStat())
+        if (MagStats.IsDefHighestStat())
+        {
+            var secondHighestStat = MagStats.GetSecondHighestStatName();
+            return secondHighestStat switch
+            {
+                MagStats.Names.None => defaultOption,
+                MagStats.Names.Def => throw new Exception("This should never happen."),
+                MagStats.Names.Pow => powOption,
+                MagStats.Names.Dex => dexOption,
+                MagStats.Names.Mind => mindOption,
+                _ => throw new ArgumentOutOfRangeException()
+            };
+        }
+
+        if (MagStats.IsPowerHighestStat())
         {
             return powOption;
         }
 
-        if (Stats.IsDexHighestStat())
+        if (MagStats.IsDexHighestStat())
         {
             return dexOption;
         }
 
-        if (Stats.IsMindHighestStat())
+        if (MagStats.IsMindHighestStat())
         {
             return mindOption;
         }
 
-        return Names.None;
+        return defaultOption;
     }
 
     private void EvolveMag(Names magName)
@@ -126,7 +130,7 @@ public class Mag
         var newMag = Mags.GetMag(magName);
 
         Name = newMag.Name;
-        Stats.Tier = newMag.Stats.Tier;
+        MagStats.Tier = newMag.MagStats.Tier;
         FeedTable = newMag.FeedTable;
         RequiredClass = newMag.RequiredClass;
     }
@@ -135,7 +139,7 @@ public class Mag
     {
         const Names name = Names.Mag;
         const Classes requiredClass = Classes.None;
-        var stats = new Stats(0, 0, 0, 0, 0, 0, 0, 0);
+        var stats = new MagStats(5, 0, 0, 0, 0, 0, 5, 0);
         var feedTable = FeedTables.GetFeedTable(0);
 
         return new Mag(name, requiredClass, stats, feedTable);
