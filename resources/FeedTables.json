@@ -4,145 +4,123 @@
       "ItemFeedData": [
         {
           "Item": 0,
-          "Stats": {
+          "ItemStats": {
             "Def": 5,
             "Pow": 40,
             "Dex": 5,
             "Mind": 0,
             "Synchro": 3,
-            "Iq": 3,
-            "Level": 0,
-            "Tier": 0
+            "Iq": 3
           }
         },
         {
           "Item": 1,
-          "Stats": {
+          "ItemStats": {
             "Def": 10,
             "Pow": 45,
             "Dex": 5,
             "Mind": 0,
             "Synchro": 3,
-            "Iq": 3,
-            "Level": 0,
-            "Tier": 0
+            "Iq": 3
           }
         },
         {
           "Item": 2,
-          "Stats": {
+          "ItemStats": {
             "Def": 15,
             "Pow": 50,
             "Dex": 10,
             "Mind": 0,
             "Synchro": 4,
-            "Iq": 4,
-            "Level": 0,
-            "Tier": 0
+            "Iq": 4
           }
         },
         {
           "Item": 3,
-          "Stats": {
+          "ItemStats": {
             "Def": 5,
             "Pow": 0,
             "Dex": 5,
             "Mind": 40,
             "Synchro": 3,
-            "Iq": 3,
-            "Level": 0,
-            "Tier": 0
+            "Iq": 3
           }
         },
         {
           "Item": 4,
-          "Stats": {
+          "ItemStats": {
             "Def": 10,
             "Pow": 0,
             "Dex": 5,
             "Mind": 45,
             "Synchro": 3,
-            "Iq": 3,
-            "Level": 0,
-            "Tier": 0
+            "Iq": 3
           }
         },
         {
           "Item": 5,
-          "Stats": {
+          "ItemStats": {
             "Def": 15,
             "Pow": 0,
             "Dex": 10,
             "Mind": 50,
             "Synchro": 4,
-            "Iq": 4,
-            "Level": 0,
-            "Tier": 0
+            "Iq": 4
           }
         },
         {
           "Item": 6,
-          "Stats": {
+          "ItemStats": {
             "Def": 5,
             "Pow": 10,
             "Dex": 40,
             "Mind": 0,
             "Synchro": 3,
-            "Iq": 3,
-            "Level": 0,
-            "Tier": 0
+            "Iq": 3
           }
         },
         {
           "Item": 7,
-          "Stats": {
+          "ItemStats": {
             "Def": 5,
             "Pow": 0,
             "Dex": 44,
             "Mind": 10,
             "Synchro": 3,
-            "Iq": 3,
-            "Level": 0,
-            "Tier": 0
+            "Iq": 3
           }
         },
         {
           "Item": 8,
-          "Stats": {
+          "ItemStats": {
             "Def": 15,
             "Pow": 30,
             "Dex": 15,
             "Mind": 25,
             "Synchro": 4,
-            "Iq": 1,
-            "Level": 0,
-            "Tier": 0
+            "Iq": 1
           }
         },
         {
           "Item": 9,
-          "Stats": {
+          "ItemStats": {
             "Def": 15,
             "Pow": 25,
             "Dex": 15,
             "Mind": 30,
             "Synchro": 4,
-            "Iq": 1,
-            "Level": 0,
-            "Tier": 0
+            "Iq": 1
           }
         },
         {
           "Item": 10,
-          "Stats": {
+          "ItemStats": {
             "Def": 25,
             "Pow": 25,
             "Dex": 25,
             "Mind": 25,
             "Synchro": 6,
-            "Iq": 5,
-            "Level": 0,
-            "Tier": 0
+            "Iq": 5
           }
         }
       ]
@@ -151,145 +129,873 @@
       "ItemFeedData": [
         {
           "Item": 0,
-          "Stats": {
+          "ItemStats": {
             "Def": 5,
             "Pow": 10,
             "Dex": 0,
             "Mind": -1,
             "Synchro": 0,
-            "Iq": 0,
-            "Level": 0,
-            "Tier": 0
+            "Iq": 0
           }
         },
         {
           "Item": 1,
-          "Stats": {
+          "ItemStats": {
             "Def": 6,
             "Pow": 15,
             "Dex": 3,
             "Mind": -3,
             "Synchro": 2,
-            "Iq": 1,
-            "Level": 0,
-            "Tier": 0
+            "Iq": 1
           }
         },
         {
           "Item": 2,
-          "Stats": {
+          "ItemStats": {
             "Def": 12,
             "Pow": 21,
             "Dex": 4,
             "Mind": -7,
             "Synchro": 3,
-            "Iq": 2,
-            "Level": 0,
-            "Tier": 0
+            "Iq": 2
           }
         },
         {
           "Item": 3,
-          "Stats": {
+          "ItemStats": {
             "Def": 5,
             "Pow": 0,
             "Dex": 0,
             "Mind": 8,
             "Synchro": 0,
-            "Iq": 0,
-            "Level": 0,
-            "Tier": 0
+            "Iq": 0
           }
         },
         {
           "Item": 4,
-          "Stats": {
+          "ItemStats": {
             "Def": 7,
             "Pow": 0,
             "Dex": 3,
             "Mind": 13,
             "Synchro": 2,
-            "Iq": 1,
-            "Level": 0,
-            "Tier": 0
+            "Iq": 1
           }
         },
         {
           "Item": 5,
-          "Stats": {
+          "ItemStats": {
             "Def": 7,
             "Pow": -7,
             "Dex": 6,
             "Mind": 19,
             "Synchro": 3,
-            "Iq": 2,
-            "Level": 0,
-            "Tier": 0
+            "Iq": 2
           }
         },
         {
           "Item": 6,
-          "Stats": {
+          "ItemStats": {
             "Def": 0,
             "Pow": 5,
             "Dex": 15,
             "Mind": 0,
             "Synchro": 0,
-            "Iq": 1,
-            "Level": 0,
-            "Tier": 0
+            "Iq": 1
           }
         },
         {
           "Item": 7,
-          "Stats": {
+          "ItemStats": {
             "Def": -1,
             "Pow": 0,
             "Dex": 14,
             "Mind": 5,
             "Synchro": 2,
-            "Iq": 0,
-            "Level": 0,
-            "Tier": 0
+            "Iq": 0
           }
         },
         {
           "Item": 8,
-          "Stats": {
+          "ItemStats": {
             "Def": 10,
             "Pow": 11,
             "Dex": 8,
             "Mind": 0,
             "Synchro": -2,
-            "Iq": 2,
-            "Level": 0,
-            "Tier": 0
+            "Iq": 2
           }
         },
         {
           "Item": 9,
-          "Stats": {
+          "ItemStats": {
             "Def": 9,
             "Pow": 0,
             "Dex": 9,
             "Mind": 11,
             "Synchro": 3,
-            "Iq": -2,
-            "Level": 0,
-            "Tier": 0
+            "Iq": -2
           }
         },
         {
           "Item": 10,
-          "Stats": {
+          "ItemStats": {
             "Def": 14,
             "Pow": 9,
             "Dex": 18,
             "Mind": 11,
             "Synchro": 4,
-            "Iq": 3,
-            "Level": 0,
-            "Tier": 0
+            "Iq": 3
+          }
+        }
+      ]
+    },
+    {
+      "ItemFeedData": [
+        {
+          "Item": 0,
+          "ItemStats": {
+            "Def": 1,
+            "Pow": 9,
+            "Dex": 0,
+            "Mind": -5,
+            "Synchro": 0,
+            "Iq": -1
+          }
+        },
+        {
+          "Item": 1,
+          "ItemStats": {
+            "Def": 1,
+            "Pow": 13,
+            "Dex": 0,
+            "Mind": -10,
+            "Synchro": 3,
+            "Iq": 0
+          }
+        },
+        {
+          "Item": 2,
+          "ItemStats": {
+            "Def": 8,
+            "Pow": 16,
+            "Dex": 2,
+            "Mind": -15,
+            "Synchro": 4,
+            "Iq": 1
+          }
+        },
+        {
+          "Item": 3,
+          "ItemStats": {
+            "Def": 0,
+            "Pow": -5,
+            "Dex": 0,
+            "Mind": 9,
+            "Synchro": 0,
+            "Iq": -1
+          }
+        },
+        {
+          "Item": 4,
+          "ItemStats": {
+            "Def": 4,
+            "Pow": -10,
+            "Dex": 0,
+            "Mind": 13,
+            "Synchro": 3,
+            "Iq": 0
+          }
+        },
+        {
+          "Item": 5,
+          "ItemStats": {
+            "Def": 6,
+            "Pow": -15,
+            "Dex": 5,
+            "Mind": 17,
+            "Synchro": 3,
+            "Iq": 2
+          }
+        },
+        {
+          "Item": 6,
+          "ItemStats": {
+            "Def": -5,
+            "Pow": 4,
+            "Dex": 12,
+            "Mind": -5,
+            "Synchro": -1,
+            "Iq": 1
+          }
+        },
+        {
+          "Item": 7,
+          "ItemStats": {
+            "Def": -5,
+            "Pow": -6,
+            "Dex": 11,
+            "Mind": 4,
+            "Synchro": 0,
+            "Iq": 0
+          }
+        },
+        {
+          "Item": 8,
+          "ItemStats": {
+            "Def": 0,
+            "Pow": 11,
+            "Dex": 3,
+            "Mind": -5,
+            "Synchro": 4,
+            "Iq": -2
+          }
+        },
+        {
+          "Item": 9,
+          "ItemStats": {
+            "Def": 4,
+            "Pow": -5,
+            "Dex": 0,
+            "Mind": 11,
+            "Synchro": -1,
+            "Iq": 1
+          }
+        },
+        {
+          "Item": 10,
+          "ItemStats": {
+            "Def": 7,
+            "Pow": 8,
+            "Dex": 6,
+            "Mind": 9,
+            "Synchro": 4,
+            "Iq": 2
+          }
+        }
+      ]
+    },
+    {
+      "ItemFeedData": [
+        {
+          "Item": 0,
+          "ItemStats": {
+            "Def": 0,
+            "Pow": 3,
+            "Dex": 0,
+            "Mind": 0,
+            "Synchro": 0,
+            "Iq": -1
+          }
+        },
+        {
+          "Item": 1,
+          "ItemStats": {
+            "Def": 5,
+            "Pow": 7,
+            "Dex": 0,
+            "Mind": -5,
+            "Synchro": 2,
+            "Iq": 0
+          }
+        },
+        {
+          "Item": 2,
+          "ItemStats": {
+            "Def": 4,
+            "Pow": 14,
+            "Dex": 6,
+            "Mind": -10,
+            "Synchro": 3,
+            "Iq": 1
+          }
+        },
+        {
+          "Item": 3,
+          "ItemStats": {
+            "Def": 0,
+            "Pow": 0,
+            "Dex": 0,
+            "Mind": 4,
+            "Synchro": 0,
+            "Iq": 0
+          }
+        },
+        {
+          "Item": 4,
+          "ItemStats": {
+            "Def": 4,
+            "Pow": -5,
+            "Dex": 0,
+            "Mind": 8,
+            "Synchro": 0,
+            "Iq": 1
+          }
+        },
+        {
+          "Item": 5,
+          "ItemStats": {
+            "Def": 4,
+            "Pow": -10,
+            "Dex": 3,
+            "Mind": 15,
+            "Synchro": 2,
+            "Iq": 2
+          }
+        },
+        {
+          "Item": 6,
+          "ItemStats": {
+            "Def": 0,
+            "Pow": 0,
+            "Dex": 7,
+            "Mind": 0,
+            "Synchro": -3,
+            "Iq": 3
+          }
+        },
+        {
+          "Item": 7,
+          "ItemStats": {
+            "Def": -4,
+            "Pow": -5,
+            "Dex": 20,
+            "Mind": -5,
+            "Synchro": 3,
+            "Iq": 0
+          }
+        },
+        {
+          "Item": 8,
+          "ItemStats": {
+            "Def": -10,
+            "Pow": 9,
+            "Dex": 6,
+            "Mind": 9,
+            "Synchro": 3,
+            "Iq": -2
+          }
+        },
+        {
+          "Item": 9,
+          "ItemStats": {
+            "Def": 8,
+            "Pow": 5,
+            "Dex": -8,
+            "Mind": 7,
+            "Synchro": -2,
+            "Iq": 2
+          }
+        },
+        {
+          "Item": 10,
+          "ItemStats": {
+            "Def": 7,
+            "Pow": 7,
+            "Dex": 7,
+            "Mind": 7,
+            "Synchro": 3,
+            "Iq": 2
+          }
+        }
+      ]
+    },
+    {
+      "ItemFeedData": [
+        {
+          "Item": 0,
+          "ItemStats": {
+            "Def": -5,
+            "Pow": 9,
+            "Dex": -5,
+            "Mind": 0,
+            "Synchro": 2,
+            "Iq": -1
+          }
+        },
+        {
+          "Item": 1,
+          "ItemStats": {
+            "Def": 0,
+            "Pow": 11,
+            "Dex": 0,
+            "Mind": -10,
+            "Synchro": 2,
+            "Iq": 0
+          }
+        },
+        {
+          "Item": 2,
+          "ItemStats": {
+            "Def": 4,
+            "Pow": 14,
+            "Dex": 0,
+            "Mind": -15,
+            "Synchro": 0,
+            "Iq": 1
+          }
+        },
+        {
+          "Item": 3,
+          "ItemStats": {
+            "Def": -5,
+            "Pow": 0,
+            "Dex": -6,
+            "Mind": 10,
+            "Synchro": 2,
+            "Iq": -1
+          }
+        },
+        {
+          "Item": 4,
+          "ItemStats": {
+            "Def": 0,
+            "Pow": -10,
+            "Dex": 0,
+            "Mind": 11,
+            "Synchro": 2,
+            "Iq": 0
+          }
+        },
+        {
+          "Item": 5,
+          "ItemStats": {
+            "Def": 4,
+            "Pow": -15,
+            "Dex": 0,
+            "Mind": 15,
+            "Synchro": 0,
+            "Iq": 1
+          }
+        },
+        {
+          "Item": 6,
+          "ItemStats": {
+            "Def": -5,
+            "Pow": -5,
+            "Dex": 16,
+            "Mind": -5,
+            "Synchro": 2,
+            "Iq": -1
+          }
+        },
+        {
+          "Item": 7,
+          "ItemStats": {
+            "Def": 7,
+            "Pow": -3,
+            "Dex": 0,
+            "Mind": -3,
+            "Synchro": -2,
+            "Iq": 3
+          }
+        },
+        {
+          "Item": 8,
+          "ItemStats": {
+            "Def": 5,
+            "Pow": 21,
+            "Dex": -5,
+            "Mind": -20,
+            "Synchro": 4,
+            "Iq": -2
+          }
+        },
+        {
+          "Item": 9,
+          "ItemStats": {
+            "Def": -5,
+            "Pow": -20,
+            "Dex": 5,
+            "Mind": 21,
+            "Synchro": 3,
+            "Iq": 0
+          }
+        },
+        {
+          "Item": 10,
+          "ItemStats": {
+            "Def": 4,
+            "Pow": 6,
+            "Dex": 8,
+            "Mind": 5,
+            "Synchro": 3,
+            "Iq": 2
+          }
+        }
+      ]
+    },
+    {
+      "ItemFeedData": [
+        {
+          "Item": 0,
+          "ItemStats": {
+            "Def": -4,
+            "Pow": 13,
+            "Dex": -5,
+            "Mind": -5,
+            "Synchro": 2,
+            "Iq": -1
+          }
+        },
+        {
+          "Item": 1,
+          "ItemStats": {
+            "Def": 0,
+            "Pow": 16,
+            "Dex": 0,
+            "Mind": -15,
+            "Synchro": 0,
+            "Iq": 1
+          }
+        },
+        {
+          "Item": 2,
+          "ItemStats": {
+            "Def": 3,
+            "Pow": 19,
+            "Dex": -2,
+            "Mind": -18,
+            "Synchro": 2,
+            "Iq": 0
+          }
+        },
+        {
+          "Item": 3,
+          "ItemStats": {
+            "Def": -4,
+            "Pow": -5,
+            "Dex": -5,
+            "Mind": 13,
+            "Synchro": 2,
+            "Iq": -1
+          }
+        },
+        {
+          "Item": 4,
+          "ItemStats": {
+            "Def": 0,
+            "Pow": -15,
+            "Dex": 0,
+            "Mind": 16,
+            "Synchro": 0,
+            "Iq": 1
+          }
+        },
+        {
+          "Item": 5,
+          "ItemStats": {
+            "Def": 3,
+            "Pow": -20,
+            "Dex": 0,
+            "Mind": 19,
+            "Synchro": 2,
+            "Iq": 0
+          }
+        },
+        {
+          "Item": 6,
+          "ItemStats": {
+            "Def": 5,
+            "Pow": -6,
+            "Dex": 6,
+            "Mind": -5,
+            "Synchro": 0,
+            "Iq": 1
+          }
+        },
+        {
+          "Item": 7,
+          "ItemStats": {
+            "Def": 0,
+            "Pow": -4,
+            "Dex": 14,
+            "Mind": -10,
+            "Synchro": -1,
+            "Iq": 1
+          }
+        },
+        {
+          "Item": 8,
+          "ItemStats": {
+            "Def": 4,
+            "Pow": 17,
+            "Dex": -5,
+            "Mind": -15,
+            "Synchro": 4,
+            "Iq": -1
+          }
+        },
+        {
+          "Item": 9,
+          "ItemStats": {
+            "Def": -10,
+            "Pow": -15,
+            "Dex": 5,
+            "Mind": 21,
+            "Synchro": 2,
+            "Iq": 0
+          }
+        },
+        {
+          "Item": 10,
+          "ItemStats": {
+            "Def": 2,
+            "Pow": 8,
+            "Dex": 3,
+            "Mind": 6,
+            "Synchro": 3,
+            "Iq": 2
+          }
+        }
+      ]
+    },
+    {
+      "ItemFeedData": [
+        {
+          "Item": 0,
+          "ItemStats": {
+            "Def": -3,
+            "Pow": 9,
+            "Dex": -3,
+            "Mind": -4,
+            "Synchro": -1,
+            "Iq": 1
+          }
+        },
+        {
+          "Item": 1,
+          "ItemStats": {
+            "Def": 0,
+            "Pow": 11,
+            "Dex": 0,
+            "Mind": -10,
+            "Synchro": 2,
+            "Iq": 0
+          }
+        },
+        {
+          "Item": 2,
+          "ItemStats": {
+            "Def": 2,
+            "Pow": 15,
+            "Dex": 0,
+            "Mind": -16,
+            "Synchro": 2,
+            "Iq": 0
+          }
+        },
+        {
+          "Item": 3,
+          "ItemStats": {
+            "Def": -3,
+            "Pow": -4,
+            "Dex": -3,
+            "Mind": 9,
+            "Synchro": -1,
+            "Iq": 1
+          }
+        },
+        {
+          "Item": 4,
+          "ItemStats": {
+            "Def": 0,
+            "Pow": -10,
+            "Dex": 0,
+            "Mind": 11,
+            "Synchro": 2,
+            "Iq": 0
+          }
+        },
+        {
+          "Item": 5,
+          "ItemStats": {
+            "Def": -2,
+            "Pow": -15,
+            "Dex": 0,
+            "Mind": 19,
+            "Synchro": 2,
+            "Iq": 0
+          }
+        },
+        {
+          "Item": 6,
+          "ItemStats": {
+            "Def": 0,
+            "Pow": 6,
+            "Dex": 9,
+            "Mind": -15,
+            "Synchro": 2,
+            "Iq": -1
+          }
+        },
+        {
+          "Item": 7,
+          "ItemStats": {
+            "Def": 0,
+            "Pow": -15,
+            "Dex": 9,
+            "Mind": 6,
+            "Synchro": -2,
+            "Iq": 3
+          }
+        },
+        {
+          "Item": 8,
+          "ItemStats": {
+            "Def": 9,
+            "Pow": -20,
+            "Dex": -5,
+            "Mind": 17,
+            "Synchro": 3,
+            "Iq": -1
+          }
+        },
+        {
+          "Item": 9,
+          "ItemStats": {
+            "Def": -5,
+            "Pow": 20,
+            "Dex": 5,
+            "Mind": -20,
+            "Synchro": 0,
+            "Iq": 2
+          }
+        },
+        {
+          "Item": 10,
+          "ItemStats": {
+            "Def": 0,
+            "Pow": 11,
+            "Dex": 0,
+            "Mind": 11,
+            "Synchro": 3,
+            "Iq": 2
+          }
+        }
+      ]
+    },
+    {
+      "ItemFeedData": [
+        {
+          "Item": 0,
+          "ItemStats": {
+            "Def": -4,
+            "Pow": 21,
+            "Dex": -15,
+            "Mind": -5,
+            "Synchro": -1,
+            "Iq": 0
+          }
+        },
+        {
+          "Item": 1,
+          "ItemStats": {
+            "Def": -1,
+            "Pow": 27,
+            "Dex": -10,
+            "Mind": -16,
+            "Synchro": 0,
+            "Iq": 1
+          }
+        },
+        {
+          "Item": 2,
+          "ItemStats": {
+            "Def": 5,
+            "Pow": 29,
+            "Dex": -7,
+            "Mind": -25,
+            "Synchro": 2,
+            "Iq": 0
+          }
+        },
+        {
+          "Item": 3,
+          "ItemStats": {
+            "Def": -10,
+            "Pow": -5,
+            "Dex": -10,
+            "Mind": 21,
+            "Synchro": -1,
+            "Iq": 0
+          }
+        },
+        {
+          "Item": 4,
+          "ItemStats": {
+            "Def": -5,
+            "Pow": -16,
+            "Dex": -5,
+            "Mind": 25,
+            "Synchro": 0,
+            "Iq": 1
+          }
+        },
+        {
+          "Item": 5,
+          "ItemStats": {
+            "Def": -7,
+            "Pow": -25,
+            "Dex": 6,
+            "Mind": 29,
+            "Synchro": 2,
+            "Iq": 0
+          }
+        },
+        {
+          "Item": 6,
+          "ItemStats": {
+            "Def": -10,
+            "Pow": -10,
+            "Dex": 28,
+            "Mind": -10,
+            "Synchro": -1,
+            "Iq": 1
+          }
+        },
+        {
+          "Item": 7,
+          "ItemStats": {
+            "Def": 9,
+            "Pow": -18,
+            "Dex": 25,
+            "Mind": -15,
+            "Synchro": 2,
+            "Iq": -1
+          }
+        },
+        {
+          "Item": 8,
+          "ItemStats": {
+            "Def": 19,
+            "Pow": 18,
+            "Dex": -15,
+            "Mind": -20,
+            "Synchro": 2,
+            "Iq": 1
+          }
+        },
+        {
+          "Item": 9,
+          "ItemStats": {
+            "Def": -15,
+            "Pow": -20,
+            "Dex": 19,
+            "Mind": 18,
+            "Synchro": 2,
+            "Iq": 1
+          }
+        },
+        {
+          "Item": 10,
+          "ItemStats": {
+            "Def": 3,
+            "Pow": 7,
+            "Dex": 3,
+            "Mind": 3,
+            "Synchro": 4,
+            "Iq": 2
           }
         }
       ]
