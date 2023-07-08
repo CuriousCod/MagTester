@@ -3,25 +3,25 @@ namespace MagData;
 public class Mag
 {
     public Names Name { get; set; }
-    public Classes RequiredClass { get; set; }
     public MagStats MagStats { get; set; }
     public FeedTable FeedTable { get; set; }
+    public List<EvolutionCondition> EvolutionConditions { get; set; }
     // public Skills LearnedSkill { get; set; }
 
     public Mag(Mag mag)
     {
         Name = mag.Name;
-        RequiredClass = mag.RequiredClass;
         MagStats = mag.MagStats;
         FeedTable = mag.FeedTable;
+        EvolutionConditions = mag.EvolutionConditions;
     }
 
-    public Mag(Names name, Classes requiredClass, MagStats magStats, FeedTable feedTable)
+    public Mag(Names name, MagStats magStats, FeedTable feedTable, List<EvolutionCondition> evolutionConditions)
     {
         Name = name;
-        RequiredClass = requiredClass;
         MagStats = magStats;
         FeedTable = feedTable;
+        EvolutionConditions = evolutionConditions;
     }
 
     public bool Feed(Items.Names names, Classes currentClass)
@@ -40,6 +40,19 @@ public class Mag
 
     private void LevelUp(Classes currentClass)
     {
+        foreach (var evolutionCondition in EvolutionConditions)
+        {
+            if (!evolutionCondition.AreConditionsFulfilled(this, currentClass, SectionIDs.None))
+            {
+                continue;
+            }
+
+            EvolveMag(evolutionCondition.GetEvolutionMagName());
+            return;
+        }
+
+        return;
+
         if (MagStats is {Level: 10, Tier: 0})
         {
             FirstTierEvolution(currentClass);
@@ -132,7 +145,7 @@ public class Mag
         Name = newMag.Name;
         MagStats.Tier = newMag.MagStats.Tier;
         FeedTable = newMag.FeedTable;
-        RequiredClass = newMag.RequiredClass;
+        EvolutionConditions = newMag.EvolutionConditions;
     }
 
     public static Mag GetDefaultMag()
@@ -142,7 +155,7 @@ public class Mag
         var stats = new MagStats(5, 0, 0, 0, 0, 0, 5, 0);
         var feedTable = FeedTables.GetFeedTable(0);
 
-        return new Mag(name, requiredClass, stats, feedTable);
+        return new Mag(name, stats, feedTable, MagData.EvolutionConditions.GetEvolutionConditionsForMag(name));
     }
 
     public static List<string> GetClassNames()
