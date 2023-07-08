@@ -7,8 +7,8 @@
   "linkerEnabled": true,
   "resources": {
     "assembly": {
-      "MagData.dll": "sha256-9xg0kwfAZJOxCOK2V4jCgZdBarm3H5b16NBtVbyPYUo=",
-      "MagTesterBlazor.dll": "sha256-LPhQbf1c8VxW4MmEZj7WI1KWIB5XKv7QNphf203Q0iE=",
+      "MagData.dll": "sha256-V5XPAgNuNnpKiU0bZPgabaYJF5q+hfQAK0E6FrjtRZE=",
+      "MagTesterBlazor.dll": "sha256-bcixTe8zMDeciX5pkAFWZIq50wjalrlI0bFXUbd59v8=",
       "Microsoft.AspNetCore.Components.dll": "sha256-2FgymUkihqHIAervz0SMTs1ztEnc0Fpg1WtDOf1AO74=",
       "Microsoft.AspNetCore.Components.Web.dll": "sha256-+B+Dw0exFpLLKnjfJM4i3\/oCk0S9vAPAWW4+uwMs5h8=",
       "Microsoft.AspNetCore.Components.WebAssembly.dll": "sha256-I3hivE2GUCLdJhJ9KPcDlOvhCiiPRvVPj+IRM0sgm8o=",
@@ -26,7 +26,7 @@
       "System.Collections.Concurrent.dll": "sha256-mNXVGQHjRfhJKyhQscoG8YbjpFWGMuE\/XwXprN0K9m0=",
       "System.Collections.dll": "sha256-rp8zucozn5NWZ+QJrk4KAERNPMiWbOGolXE23f7xXFc=",
       "System.ComponentModel.dll": "sha256-yqU5bVP1l5SVcAZUDNhbMYsDxncUP3gmrZcC49HmZy8=",
-      "System.Linq.dll": "sha256-AgyytLSqm99xYEOkLR758W7oxZvAdoaHZUZP0XFtuts=",
+      "System.Linq.dll": "sha256-dlKXbS5kI\/fIPgZfyLh2MunrHVmlI+KRVlgaajWQ3VM=",
       "System.Memory.dll": "sha256-S5RGxFn8uKbQ2CLYc3yNNNuJPofLl05Q4LQhwNoCvLQ=",
       "System.Net.Http.dll": "sha256-POCvsou9jZeIVIUhZRcUikM5+maGtvDVrYk1oHMq9BU=",
       "System.Net.Http.Json.dll": "sha256-TGCJIBQ0Iy9DBnXJH\/U0qSVesvP\/Q7WlWSAMBvAAbbQ=",
