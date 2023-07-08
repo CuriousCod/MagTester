@@ -120,9 +120,9 @@
             return;
         }
 
-        var classType = (Classes)classIndex;
+        var classType = (PlayerCharacter.Classes)classIndex;
 
-        var result = _mag.Feed((Items.Names)index, classType);
+        var result = _mag.Feed((Items.Names)index, new PlayerCharacter(classType));
     }
 
     private void FeedMultiple(int amount)

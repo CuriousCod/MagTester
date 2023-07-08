@@ -24,7 +24,7 @@ public class Mag
         EvolutionConditions = evolutionConditions;
     }
 
-    public bool Feed(Items.Names names, Classes currentClass)
+    public bool Feed(Items.Names names, PlayerCharacter playerCharacter)
     {
         var itemGain = FeedTable.GetItemData(names);
 
@@ -32,17 +32,17 @@ public class Mag
 
         if (levelUp)
         {
-            LevelUp(currentClass);
+            LevelUp(playerCharacter);
         }
 
         return levelUp;
     }
 
-    private void LevelUp(Classes currentClass)
+    private void LevelUp(PlayerCharacter playerCharacter)
     {
         foreach (var evolutionCondition in EvolutionConditions)
         {
-            if (!evolutionCondition.AreConditionsFulfilled(this, currentClass, SectionIDs.None))
+            if (!evolutionCondition.AreConditionsFulfilled(this, playerCharacter))
             {
                 continue;
             }
@@ -50,35 +50,21 @@ public class Mag
             EvolveMag(evolutionCondition.GetEvolutionMagName());
             return;
         }
-
-        return;
-
-        if (MagStats is {Level: 10, Tier: 0})
-        {
-            FirstTierEvolution(currentClass);
-            return;
-        }
-
-        if (MagStats is {Level: 35, Tier: 1})
-        {
-            SecondTierEvolution();
-            return;
-        }
     }
 
-    private void FirstTierEvolution(Classes currentClass)
+    private void FirstTierEvolution(PlayerCharacter.Classes currentClass)
     {
         switch (currentClass)
         {
-            case Classes.None:
+            case PlayerCharacter.Classes.None:
                 throw new Exception("Cannot evolve a mag with no class.");
-            case Classes.Hunter:
+            case PlayerCharacter.Classes.Hunter:
                 EvolveMag(Names.Varuna);
                 break;
-            case Classes.Ranger:
+            case PlayerCharacter.Classes.Ranger:
                 EvolveMag(Names.Kalki);
                 break;
-            case Classes.Force:
+            case PlayerCharacter.Classes.Force:
                 EvolveMag(Names.Vritra);
                 break;
             default:
@@ -151,7 +137,7 @@ public class Mag
     public static Mag GetDefaultMag()
     {
         const Names name = Names.Mag;
-        const Classes requiredClass = Classes.None;
+        const PlayerCharacter.Classes requiredClass = PlayerCharacter.Classes.None;
         var stats = new MagStats(5, 0, 0, 0, 0, 0, 5, 0);
         var feedTable = FeedTables.GetFeedTable(0);
 
@@ -160,7 +146,7 @@ public class Mag
 
     public static List<string> GetClassNames()
     {
-        var classNames = Enum.GetNames(typeof(Classes));
+        var classNames = Enum.GetNames(typeof(PlayerCharacter.Classes));
 
         classNames = classNames.Take(classNames.Length - 1).ToArray();
 

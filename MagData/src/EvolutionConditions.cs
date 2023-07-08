@@ -109,7 +109,7 @@ public class EvolutionConditions
     {
         var varuna = new EvolutionCondition(Names.Varuna)
         {
-            RequiredClass = Classes.Hunter,
+            PlayerCharacterRequirements = new PlayerCharacter(PlayerCharacter.Classes.Hunter),
             RequiredMag = Names.Mag,
             CharacterLevel = 0,
             MinLevel = 0,
@@ -121,7 +121,7 @@ public class EvolutionConditions
 
         var kalki = new EvolutionCondition(Names.Kalki)
         {
-            RequiredClass = Classes.Ranger,
+            PlayerCharacterRequirements = new PlayerCharacter(PlayerCharacter.Classes.Ranger),
             RequiredMag = Names.Mag,
             CharacterLevel = 0,
             MinLevel = 0,
@@ -133,7 +133,7 @@ public class EvolutionConditions
 
         var vritra = new EvolutionCondition(Names.Vritra)
         {
-            RequiredClass = Classes.Force,
+            PlayerCharacterRequirements = new PlayerCharacter(PlayerCharacter.Classes.Force),
             RequiredMag = Names.Mag,
             CharacterLevel = 0,
             MinLevel = 0,
@@ -300,7 +300,7 @@ public class EvolutionConditions
         var andhaka = new EvolutionCondition(Names.Andhaka)
         {
             Tier = tier2,
-            RequiredClass = Classes.Force,
+            PlayerCharacterRequirements = new PlayerCharacter(PlayerCharacter.Classes.Force),
             AreStatsRequired = true,
             IsBasicStatComparisonRequired = false,
             SpecialStatRequirements = new List<EvolutionCondition.SpecialStatRequirement>(){new()
@@ -327,7 +327,7 @@ public class EvolutionConditions
         var apsaras01 = new EvolutionCondition(Names.Apsaras)
         {
             Tier = tier2,
-            RequiredClass = Classes.Hunter,
+            PlayerCharacterRequirements = new PlayerCharacter(PlayerCharacter.Classes.Hunter),
             RequiredSectionId = new List<SectionIDs> {SectionIDs.Greenill, SectionIDs.Bluefull, SectionIDs.Pinkal, SectionIDs.Oran, SectionIDs.Whitill},
             AreStatsRequired = true,
             IsBasicStatComparisonRequired = true,
@@ -346,7 +346,7 @@ public class EvolutionConditions
         var apsaras02 = new EvolutionCondition(Names.Apsaras)
         {
             Tier = tier2,
-            RequiredClass = Classes.Ranger,
+            PlayerCharacterRequirements = new PlayerCharacter(PlayerCharacter.Classes.Ranger),
             RequiredSectionId = new List<SectionIDs> {SectionIDs.Viridia, SectionIDs.Skyly, SectionIDs.Purplenum, SectionIDs.Redria, SectionIDs.Yellowboze},
             AreStatsRequired = true,
             IsBasicStatComparisonRequired = true,
@@ -365,7 +365,7 @@ public class EvolutionConditions
         var bana01 = new EvolutionCondition(Names.Bana)
         {
             Tier = tier2,
-            RequiredClass = Classes.Hunter,
+            PlayerCharacterRequirements = new PlayerCharacter(PlayerCharacter.Classes.Hunter),
             RequiredSectionId = new List<SectionIDs> {SectionIDs.Greenill, SectionIDs.Bluefull, SectionIDs.Pinkal, SectionIDs.Oran, SectionIDs.Whitill},
             AreStatsRequired = true,
             IsBasicStatComparisonRequired = true,
@@ -384,7 +384,7 @@ public class EvolutionConditions
         var bana02 = new EvolutionCondition(Names.Bana)
         {
             Tier = tier2,
-            RequiredClass = Classes.Force,
+            PlayerCharacterRequirements = new PlayerCharacter(PlayerCharacter.Classes.Force),
             AreStatsRequired = true,
             IsBasicStatComparisonRequired = false,
             SpecialStatRequirements = new List<EvolutionCondition.SpecialStatRequirement>(){new()
@@ -408,7 +408,7 @@ public class EvolutionConditions
         var bana03 = new EvolutionCondition(Names.Bana)
         {
             Tier = tier2,
-            RequiredClass = Classes.Force,
+            PlayerCharacterRequirements = new PlayerCharacter(PlayerCharacter.Classes.Force),
             AreStatsRequired = true,
             IsBasicStatComparisonRequired = false,
             SpecialStatRequirements = new List<EvolutionCondition.SpecialStatRequirement>(){new()
@@ -432,7 +432,7 @@ public class EvolutionConditions
         var bhirava01 = new EvolutionCondition(Names.Bhirava)
         {
             Tier = tier2,
-            RequiredClass = Classes.Hunter,
+            PlayerCharacterRequirements = new PlayerCharacter(PlayerCharacter.Classes.Hunter),
             RequiredSectionId = new List<SectionIDs> {SectionIDs.Viridia, SectionIDs.Skyly, SectionIDs.Purplenum, SectionIDs.Redria, SectionIDs.Yellowboze},
             AreStatsRequired = true,
             IsBasicStatComparisonRequired = true,
@@ -451,7 +451,7 @@ public class EvolutionConditions
         var bhirava02 = new EvolutionCondition(Names.Bhirava)
         {
             Tier = tier2,
-            RequiredClass = Classes.Ranger,
+            PlayerCharacterRequirements = new PlayerCharacter(PlayerCharacter.Classes.Ranger),
             RequiredSectionId = new List<SectionIDs> {SectionIDs.Viridia, SectionIDs.Skyly, SectionIDs.Purplenum, SectionIDs.Redria, SectionIDs.Yellowboze},
             AreStatsRequired = true,
             IsBasicStatComparisonRequired = true,
@@ -470,7 +470,7 @@ public class EvolutionConditions
         var bhirava03 = new EvolutionCondition(Names.Bhirava)
         {
             Tier = tier2,
-            RequiredClass = Classes.Ranger,
+            PlayerCharacterRequirements = new PlayerCharacter(PlayerCharacter.Classes.Ranger),
             RequiredSectionId = new List<SectionIDs> {SectionIDs.Viridia, SectionIDs.Skyly, SectionIDs.Purplenum, SectionIDs.Redria, SectionIDs.Yellowboze},
             AreStatsRequired = true,
             IsBasicStatComparisonRequired = true,
@@ -489,7 +489,7 @@ public class EvolutionConditions
         var bhirava04 = new EvolutionCondition(Names.Bhirava)
         {
             Tier = tier2,
-            RequiredClass = Classes.Force,
+            PlayerCharacterRequirements = new PlayerCharacter(PlayerCharacter.Classes.Force),
             RequiredSectionId = new List<SectionIDs> {SectionIDs.Greenill, SectionIDs.Bluefull, SectionIDs.Pinkal, SectionIDs.Oran, SectionIDs.Whitill},
             AreStatsRequired = true,
             IsBasicStatComparisonRequired = true,
@@ -508,7 +508,7 @@ public class EvolutionConditions
         var durga = new EvolutionCondition(Names.Durga)
         {
             Tier = tier2,
-            RequiredClass = Classes.Ranger,
+            PlayerCharacterRequirements = new PlayerCharacter(PlayerCharacter.Classes.Ranger),
             RequiredSectionId = new List<SectionIDs> {SectionIDs.Greenill, SectionIDs.Bluefull, SectionIDs.Pinkal, SectionIDs.Oran, SectionIDs.Whitill},
             AreStatsRequired = true,
             IsBasicStatComparisonRequired = true,
@@ -527,7 +527,7 @@ public class EvolutionConditions
         var garuda01 = new EvolutionCondition(Names.Garuda)
         {
             Tier = tier2,
-            RequiredClass = Classes.Hunter,
+            PlayerCharacterRequirements = new PlayerCharacter(PlayerCharacter.Classes.Hunter),
             RequiredSectionId = new List<SectionIDs> {SectionIDs.Greenill, SectionIDs.Bluefull, SectionIDs.Pinkal, SectionIDs.Oran, SectionIDs.Whitill},
             AreStatsRequired = true,
             IsBasicStatComparisonRequired = true,
@@ -546,7 +546,7 @@ public class EvolutionConditions
         var garuda02 = new EvolutionCondition(Names.Garuda)
         {
             Tier = tier2,
-            RequiredClass = Classes.Force,
+            PlayerCharacterRequirements = new PlayerCharacter(PlayerCharacter.Classes.Force),
             RequiredSectionId = new List<SectionIDs> {SectionIDs.Greenill, SectionIDs.Bluefull, SectionIDs.Pinkal, SectionIDs.Oran, SectionIDs.Whitill},
             AreStatsRequired = true,
             IsBasicStatComparisonRequired = true,
@@ -565,7 +565,7 @@ public class EvolutionConditions
         var ila01 = new EvolutionCondition(Names.Ila)
         {
             Tier = tier2,
-            RequiredClass = Classes.Hunter,
+            PlayerCharacterRequirements = new PlayerCharacter(PlayerCharacter.Classes.Hunter),
             RequiredSectionId = new List<SectionIDs> {SectionIDs.Viridia, SectionIDs.Skyly, SectionIDs.Purplenum, SectionIDs.Redria, SectionIDs.Yellowboze},
             AreStatsRequired = true,
             IsBasicStatComparisonRequired = true,
@@ -584,7 +584,7 @@ public class EvolutionConditions
         var ila02 = new EvolutionCondition(Names.Ila)
         {
             Tier = tier2,
-            RequiredClass = Classes.Force,
+            PlayerCharacterRequirements = new PlayerCharacter(PlayerCharacter.Classes.Force),
             RequiredSectionId = new List<SectionIDs> {SectionIDs.Greenill, SectionIDs.Bluefull, SectionIDs.Pinkal, SectionIDs.Oran, SectionIDs.Skyly},
             AreStatsRequired = true,
             IsBasicStatComparisonRequired = true,
@@ -603,7 +603,7 @@ public class EvolutionConditions
         var kabanda01 = new EvolutionCondition(Names.Kabanda)
         {
             Tier = tier2,
-            RequiredClass = Classes.Hunter,
+            PlayerCharacterRequirements = new PlayerCharacter(PlayerCharacter.Classes.Hunter),
             RequiredSectionId = new List<SectionIDs> {SectionIDs.Viridia, SectionIDs.Skyly, SectionIDs.Purplenum, SectionIDs.Redria, SectionIDs.Yellowboze},
             AreStatsRequired = true,
             IsBasicStatComparisonRequired = true,
@@ -623,7 +623,7 @@ public class EvolutionConditions
         var kabanda02 = new EvolutionCondition(Names.Kabanda)
         {
             Tier = tier2,
-            RequiredClass = Classes.Hunter,
+            PlayerCharacterRequirements = new PlayerCharacter(PlayerCharacter.Classes.Hunter),
             RequiredSectionId = new List<SectionIDs> {SectionIDs.Greenill, SectionIDs.Bluefull, SectionIDs.Pinkal, SectionIDs.Oran, SectionIDs.Whitill},
             AreStatsRequired = true,
             IsBasicStatComparisonRequired = true,
@@ -643,7 +643,7 @@ public class EvolutionConditions
         var kabanda03 = new EvolutionCondition(Names.Kabanda)
         {
             Tier = tier2,
-            RequiredClass = Classes.Force,
+            PlayerCharacterRequirements = new PlayerCharacter(PlayerCharacter.Classes.Force),
             RequiredSectionId = new List<SectionIDs> {SectionIDs.Viridia, SectionIDs.Skyly, SectionIDs.Purplenum, SectionIDs.Redria, SectionIDs.Yellowboze},
             AreStatsRequired = true,
             IsBasicStatComparisonRequired = true,
@@ -662,7 +662,7 @@ public class EvolutionConditions
         var kaitabha01 = new EvolutionCondition(Names.Kaitabha)
         {
             Tier = tier2,
-            RequiredClass = Classes.Ranger,
+            PlayerCharacterRequirements = new PlayerCharacter(PlayerCharacter.Classes.Ranger),
             RequiredSectionId = new List<SectionIDs> {SectionIDs.Greenill, SectionIDs.Bluefull, SectionIDs.Pinkal, SectionIDs.Oran, SectionIDs.Whitill},
             AreStatsRequired = true,
             IsBasicStatComparisonRequired = true,
@@ -681,7 +681,7 @@ public class EvolutionConditions
         var kaitabha02 = new EvolutionCondition(Names.Kaitabha)
         {
             Tier = tier2,
-            RequiredClass = Classes.Ranger,
+            PlayerCharacterRequirements = new PlayerCharacter(PlayerCharacter.Classes.Ranger),
             RequiredSectionId = new List<SectionIDs> {SectionIDs.Greenill, SectionIDs.Bluefull, SectionIDs.Pinkal, SectionIDs.Oran, SectionIDs.Whitill},
             AreStatsRequired = true,
             IsBasicStatComparisonRequired = true,
@@ -700,7 +700,7 @@ public class EvolutionConditions
         var kama01 = new EvolutionCondition(Names.Kama)
         {
             Tier = tier2,
-            RequiredClass = Classes.Hunter,
+            PlayerCharacterRequirements = new PlayerCharacter(PlayerCharacter.Classes.Hunter),
             RequiredSectionId = new List<SectionIDs> {SectionIDs.Greenill, SectionIDs.Bluefull, SectionIDs.Pinkal, SectionIDs.Oran, SectionIDs.Whitill},
             AreStatsRequired = true,
             IsBasicStatComparisonRequired = true,
@@ -720,7 +720,7 @@ public class EvolutionConditions
         var kama02 = new EvolutionCondition(Names.Kama)
         {
             Tier = tier2,
-            RequiredClass = Classes.Hunter,
+            PlayerCharacterRequirements = new PlayerCharacter(PlayerCharacter.Classes.Hunter),
             RequiredSectionId = new List<SectionIDs> {SectionIDs.Greenill, SectionIDs.Bluefull, SectionIDs.Pinkal, SectionIDs.Oran, SectionIDs.Whitill},
             AreStatsRequired = true,
             IsBasicStatComparisonRequired = true,
@@ -739,7 +739,7 @@ public class EvolutionConditions
         var kama03 = new EvolutionCondition(Names.Kama)
         {
             Tier = tier2,
-            RequiredClass = Classes.Ranger,
+            PlayerCharacterRequirements = new PlayerCharacter(PlayerCharacter.Classes.Ranger),
             RequiredSectionId = new List<SectionIDs> {SectionIDs.Viridia, SectionIDs.Skyly, SectionIDs.Purplenum, SectionIDs.Redria, SectionIDs.Yellowboze},
             AreStatsRequired = true,
             IsBasicStatComparisonRequired = true,
@@ -758,7 +758,7 @@ public class EvolutionConditions
         var kama04 = new EvolutionCondition(Names.Kama)
         {
             Tier = tier2,
-            RequiredClass = Classes.Ranger,
+            PlayerCharacterRequirements = new PlayerCharacter(PlayerCharacter.Classes.Ranger),
             RequiredSectionId = new List<SectionIDs> {SectionIDs.Viridia, SectionIDs.Skyly, SectionIDs.Purplenum, SectionIDs.Redria, SectionIDs.Yellowboze},
             AreStatsRequired = true,
             IsBasicStatComparisonRequired = true,
@@ -778,7 +778,7 @@ public class EvolutionConditions
         var kama05 = new EvolutionCondition(Names.Kama)
         {
             Tier = tier2,
-            RequiredClass = Classes.Hunter,
+            PlayerCharacterRequirements = new PlayerCharacter(PlayerCharacter.Classes.Hunter),
             RequiredSectionId = new List<SectionIDs> {SectionIDs.Viridia, SectionIDs.Skyly, SectionIDs.Purplenum, SectionIDs.Redria, SectionIDs.Yellowboze},
             AreStatsRequired = true,
             IsBasicStatComparisonRequired = true,
@@ -797,7 +797,7 @@ public class EvolutionConditions
         var kumara01 = new EvolutionCondition(Names.Kumara)
         {
             Tier = tier2,
-            RequiredClass = Classes.Force,
+            PlayerCharacterRequirements = new PlayerCharacter(PlayerCharacter.Classes.Force),
             RequiredSectionId = new List<SectionIDs> {SectionIDs.Greenill, SectionIDs.Bluefull, SectionIDs.Pinkal, SectionIDs.Oran, SectionIDs.Whitill},
             AreStatsRequired = true,
             IsBasicStatComparisonRequired = true,
@@ -817,7 +817,7 @@ public class EvolutionConditions
         var kumara02 = new EvolutionCondition(Names.Kumara)
         {
             Tier = tier2,
-            RequiredClass = Classes.Force,
+            PlayerCharacterRequirements = new PlayerCharacter(PlayerCharacter.Classes.Force),
             RequiredSectionId = new List<SectionIDs> {SectionIDs.Greenill, SectionIDs.Bluefull, SectionIDs.Pinkal, SectionIDs.Oran, SectionIDs.Whitill},
             AreStatsRequired = true,
             IsBasicStatComparisonRequired = true,
@@ -836,7 +836,7 @@ public class EvolutionConditions
         var madhu = new EvolutionCondition(Names.Madhu)
         {
             Tier = tier2,
-            RequiredClass = Classes.Ranger,
+            PlayerCharacterRequirements = new PlayerCharacter(PlayerCharacter.Classes.Ranger),
             RequiredSectionId = new List<SectionIDs> {SectionIDs.Greenill, SectionIDs.Bluefull, SectionIDs.Pinkal, SectionIDs.Oran, SectionIDs.Whitill},
             AreStatsRequired = true,
             IsBasicStatComparisonRequired = true,
@@ -855,7 +855,7 @@ public class EvolutionConditions
         var marica = new EvolutionCondition(Names.Marica)
         {
             Tier = tier2,
-            RequiredClass = Classes.Force,
+            PlayerCharacterRequirements = new PlayerCharacter(PlayerCharacter.Classes.Force),
             RequiredSectionId = new List<SectionIDs> {SectionIDs.Greenill, SectionIDs.Bluefull, SectionIDs.Pinkal, SectionIDs.Oran, SectionIDs.Whitill},
             AreStatsRequired = true,
             IsBasicStatComparisonRequired = true,
@@ -874,7 +874,7 @@ public class EvolutionConditions
         var naga01 = new EvolutionCondition(Names.Naga)
         {
             Tier = tier2,
-            RequiredClass = Classes.Force,
+            PlayerCharacterRequirements = new PlayerCharacter(PlayerCharacter.Classes.Force),
             RequiredSectionId = new List<SectionIDs> {SectionIDs.Greenill, SectionIDs.Bluefull, SectionIDs.Pinkal, SectionIDs.Oran, SectionIDs.Whitill},
             AreStatsRequired = true,
             IsBasicStatComparisonRequired = true,
@@ -892,7 +892,7 @@ public class EvolutionConditions
         var naga02 = new EvolutionCondition(Names.Naga)
         {
             Tier = tier2,
-            RequiredClass = Classes.Force,
+            PlayerCharacterRequirements = new PlayerCharacter(PlayerCharacter.Classes.Force),
             RequiredSectionId = new List<SectionIDs> {SectionIDs.Viridia, SectionIDs.Skyly, SectionIDs.Purplenum, SectionIDs.Redria, SectionIDs.Yellowboze},
             AreStatsRequired = true,
             IsBasicStatComparisonRequired = true,
@@ -912,7 +912,7 @@ public class EvolutionConditions
         var naga03 = new EvolutionCondition(Names.Naga)
         {
             Tier = tier2,
-            RequiredClass = Classes.Force,
+            PlayerCharacterRequirements = new PlayerCharacter(PlayerCharacter.Classes.Force),
             RequiredSectionId = new List<SectionIDs> {SectionIDs.Viridia, SectionIDs.Skyly, SectionIDs.Purplenum, SectionIDs.Redria, SectionIDs.Yellowboze},
             AreStatsRequired = true,
             IsBasicStatComparisonRequired = true,
@@ -931,7 +931,7 @@ public class EvolutionConditions
         var nandin = new EvolutionCondition(Names.Nandin)
         {
             Tier = tier2,
-            RequiredClass = Classes.Hunter,
+            PlayerCharacterRequirements = new PlayerCharacter(PlayerCharacter.Classes.Hunter),
             RequiredSectionId = new List<SectionIDs> {SectionIDs.Viridia, SectionIDs.Skyly, SectionIDs.Purplenum, SectionIDs.Redria, SectionIDs.Yellowboze},
             AreStatsRequired = true,
             IsBasicStatComparisonRequired = true,
@@ -950,7 +950,7 @@ public class EvolutionConditions
         var naraka = new EvolutionCondition(Names.Naraka)
         {
             Tier = tier2,
-            RequiredClass = Classes.Force,
+            PlayerCharacterRequirements = new PlayerCharacter(PlayerCharacter.Classes.Force),
             RequiredSectionId = new List<SectionIDs> {SectionIDs.Viridia, SectionIDs.Skyly, SectionIDs.Purplenum, SectionIDs.Redria, SectionIDs.Yellowboze},
             AreStatsRequired = true,
             IsBasicStatComparisonRequired = true,
@@ -969,7 +969,7 @@ public class EvolutionConditions
         var ravana = new EvolutionCondition(Names.Ravana)
         {
             Tier = tier2,
-            RequiredClass = Classes.Force,
+            PlayerCharacterRequirements = new PlayerCharacter(PlayerCharacter.Classes.Force),
             RequiredSectionId = new List<SectionIDs> {SectionIDs.Viridia, SectionIDs.Skyly, SectionIDs.Purplenum, SectionIDs.Redria, SectionIDs.Yellowboze},
             AreStatsRequired = true,
             IsBasicStatComparisonRequired = true,
@@ -987,7 +987,7 @@ public class EvolutionConditions
         var ribhava = new EvolutionCondition(Names.Ribhava)
         {
             Tier = tier2,
-            RequiredClass = Classes.Force,
+            PlayerCharacterRequirements = new PlayerCharacter(PlayerCharacter.Classes.Force),
             RequiredSectionId = new List<SectionIDs> {SectionIDs.Viridia, SectionIDs.Skyly, SectionIDs.Purplenum, SectionIDs.Redria, SectionIDs.Yellowboze},
             AreStatsRequired = true,
             IsBasicStatComparisonRequired = true,
@@ -1005,7 +1005,7 @@ public class EvolutionConditions
         var sita = new EvolutionCondition(Names.Sita)
         {
             Tier = tier2,
-            RequiredClass = Classes.Force,
+            PlayerCharacterRequirements = new PlayerCharacter(PlayerCharacter.Classes.Force),
             RequiredSectionId = new List<SectionIDs> {SectionIDs.Viridia, SectionIDs.Skyly, SectionIDs.Purplenum, SectionIDs.Redria, SectionIDs.Yellowboze},
             AreStatsRequired = true,
             IsBasicStatComparisonRequired = true,
@@ -1023,7 +1023,7 @@ public class EvolutionConditions
         var soma = new EvolutionCondition(Names.Soma)
         {
             Tier = tier2,
-            RequiredClass = Classes.Hunter,
+            PlayerCharacterRequirements = new PlayerCharacter(PlayerCharacter.Classes.Hunter),
             RequiredSectionId = new List<SectionIDs> {SectionIDs.Greenill,SectionIDs.Bluefull, SectionIDs.Pinkal, SectionIDs.Oran, SectionIDs.Whitill},
             AreStatsRequired = true,
             IsBasicStatComparisonRequired = true,
@@ -1041,7 +1041,7 @@ public class EvolutionConditions
         var ushasu = new EvolutionCondition(Names.Ushasu)
         {
             Tier = tier2,
-            RequiredClass = Classes.Hunter,
+            PlayerCharacterRequirements = new PlayerCharacter(PlayerCharacter.Classes.Hunter),
             RequiredSectionId = new List<SectionIDs> {SectionIDs.Viridia, SectionIDs.Skyly, SectionIDs.Purplenum, SectionIDs.Redria, SectionIDs.Yellowboze},
             AreStatsRequired = true,
             IsBasicStatComparisonRequired = true,
@@ -1059,7 +1059,7 @@ public class EvolutionConditions
         var varaha01 = new EvolutionCondition(Names.Varaha)
         {
             Tier = tier2,
-            RequiredClass = Classes.Hunter,
+            PlayerCharacterRequirements = new PlayerCharacter(PlayerCharacter.Classes.Hunter),
             RequiredSectionId = new List<SectionIDs> {SectionIDs.Viridia, SectionIDs.Skyly, SectionIDs.Purplenum, SectionIDs.Redria, SectionIDs.Yellowboze},
             AreStatsRequired = true,
             IsBasicStatComparisonRequired = true,
@@ -1079,7 +1079,7 @@ public class EvolutionConditions
         var varaha02 = new EvolutionCondition(Names.Varaha)
         {
             Tier = tier2,
-            RequiredClass = Classes.Hunter,
+            PlayerCharacterRequirements = new PlayerCharacter(PlayerCharacter.Classes.Hunter),
             RequiredSectionId = new List<SectionIDs> {SectionIDs.Viridia, SectionIDs.Skyly, SectionIDs.Purplenum, SectionIDs.Redria, SectionIDs.Yellowboze},
             AreStatsRequired = true,
             IsBasicStatComparisonRequired = true,
@@ -1098,7 +1098,7 @@ public class EvolutionConditions
         var varaha03 = new EvolutionCondition(Names.Varaha)
         {
             Tier = tier2,
-            RequiredClass = Classes.Ranger,
+            PlayerCharacterRequirements = new PlayerCharacter(PlayerCharacter.Classes.Ranger),
             RequiredSectionId = new List<SectionIDs> {SectionIDs.Viridia, SectionIDs.Skyly, SectionIDs.Purplenum, SectionIDs.Redria, SectionIDs.Yellowboze},
             AreStatsRequired = true,
             IsBasicStatComparisonRequired = true,
@@ -1117,7 +1117,7 @@ public class EvolutionConditions
         var varaha04 = new EvolutionCondition(Names.Varaha)
         {
             Tier = tier2,
-            RequiredClass = Classes.Ranger,
+            PlayerCharacterRequirements = new PlayerCharacter(PlayerCharacter.Classes.Ranger),
             RequiredSectionId = new List<SectionIDs> {SectionIDs.Greenill, SectionIDs.Bluefull, SectionIDs.Pinkal, SectionIDs.Oran, SectionIDs.Whitill},
             AreStatsRequired = true,
             IsBasicStatComparisonRequired = true,
@@ -1137,7 +1137,7 @@ public class EvolutionConditions
         var varaha05 = new EvolutionCondition(Names.Varaha)
         {
             Tier = tier2,
-            RequiredClass = Classes.Ranger,
+            PlayerCharacterRequirements = new PlayerCharacter(PlayerCharacter.Classes.Ranger),
             RequiredSectionId = new List<SectionIDs> {SectionIDs.Greenill, SectionIDs.Bluefull, SectionIDs.Pinkal, SectionIDs.Oran, SectionIDs.Whitill},
             AreStatsRequired = true,
             IsBasicStatComparisonRequired = true,
@@ -1156,7 +1156,7 @@ public class EvolutionConditions
         var yaksa = new EvolutionCondition(Names.Yaksa)
         {
             Tier = tier2,
-            RequiredClass = Classes.Hunter,
+            PlayerCharacterRequirements = new PlayerCharacter(PlayerCharacter.Classes.Hunter),
             RequiredSectionId = new List<SectionIDs> {SectionIDs.Greenill,SectionIDs.Bluefull, SectionIDs.Pinkal, SectionIDs.Oran, SectionIDs.Whitill},
             AreStatsRequired = true,
             IsBasicStatComparisonRequired = true,
@@ -1229,8 +1229,7 @@ public class EvolutionConditions
         var bhima01 = new EvolutionCondition(Names.Bhima)
         {
             Tier = tier3,
-            RequiredGender = Gender.Female,
-            RequiredClass = Classes.Force,
+            PlayerCharacterRequirements = new PlayerCharacter(PlayerCharacter.Classes.Force, PlayerCharacter.Genders.Female),
             RequiredSectionId = new List<SectionIDs> {SectionIDs.Greenill, SectionIDs.Purplenum, SectionIDs.Oran},
             AreStatsRequired = true,
             IsBasicStatComparisonRequired = false,
@@ -1250,8 +1249,7 @@ public class EvolutionConditions
         var bhima02 = new EvolutionCondition(Names.Bhima)
         {
             Tier = tier3,
-            RequiredGender = Gender.Female,
-            RequiredClass = Classes.Force,
+            PlayerCharacterRequirements = new PlayerCharacter(PlayerCharacter.Classes.Force, PlayerCharacter.Genders.Female),
             RequiredSectionId = new List<SectionIDs> {SectionIDs.Skyly, SectionIDs.Pinkal, SectionIDs.Yellowboze},
             AreStatsRequired = true,
             IsBasicStatComparisonRequired = false,
@@ -1271,8 +1269,7 @@ public class EvolutionConditions
         var deva =  new EvolutionCondition(Names.Deva)
         {
             Tier = tier3,
-            RequiredGender = Gender.Male,
-            RequiredClass = Classes.Hunter,
+            PlayerCharacterRequirements = new PlayerCharacter(PlayerCharacter.Classes.Hunter, PlayerCharacter.Genders.Male),
             RequiredSectionId = new List<SectionIDs> {SectionIDs.Viridia, SectionIDs.Bluefull, SectionIDs.Redria, SectionIDs.Whitill},
             AreStatsRequired = true,
             IsBasicStatComparisonRequired = false,
@@ -1292,8 +1289,7 @@ public class EvolutionConditions
         var diwari = new EvolutionCondition(Names.Diwari)
         {
             Tier = tier3,
-            RequiredGender = Gender.Female,
-            RequiredClass = Classes.Ranger,
+            PlayerCharacterRequirements = new PlayerCharacter(PlayerCharacter.Classes.Ranger, PlayerCharacter.Genders.Female),
             RequiredSectionId = new List<SectionIDs> {SectionIDs.Skyly, SectionIDs.Pinkal, SectionIDs.Yellowboze},
             AreStatsRequired = true,
             IsBasicStatComparisonRequired = false,
@@ -1313,8 +1309,7 @@ public class EvolutionConditions
         var nidra01 = new EvolutionCondition(Names.Nidra)
         {
             Tier = tier3,
-            RequiredGender = Gender.Male,
-            RequiredClass = Classes.Force,
+            PlayerCharacterRequirements = new PlayerCharacter(PlayerCharacter.Classes.Force, PlayerCharacter.Genders.Male),
             RequiredSectionId = new List<SectionIDs> {SectionIDs.Viridia, SectionIDs.Bluefull, SectionIDs.Redria, SectionIDs.Whitill},
             AreStatsRequired = true,
             IsBasicStatComparisonRequired = false,
@@ -1334,8 +1329,7 @@ public class EvolutionConditions
         var nidra02 = new EvolutionCondition(Names.Nidra)
         {
             Tier = tier3,
-            RequiredGender = Gender.Male,
-            RequiredClass = Classes.Force,
+            PlayerCharacterRequirements = new PlayerCharacter(PlayerCharacter.Classes.Force, PlayerCharacter.Genders.Male),
             RequiredSectionId = new List<SectionIDs> {SectionIDs.Greenill, SectionIDs.Purplenum, SectionIDs.Oran},
             AreStatsRequired = true,
             IsBasicStatComparisonRequired = false,
@@ -1355,8 +1349,7 @@ public class EvolutionConditions
         var nidra03 = new EvolutionCondition(Names.Nidra)
         {
             Tier = tier3,
-            RequiredGender = Gender.Male,
-            RequiredClass = Classes.Force,
+            PlayerCharacterRequirements = new PlayerCharacter(PlayerCharacter.Classes.Force, PlayerCharacter.Genders.Male),
             RequiredSectionId = new List<SectionIDs> {SectionIDs.Skyly, SectionIDs.Pinkal, SectionIDs.Yellowboze},
             AreStatsRequired = true,
             IsBasicStatComparisonRequired = false,
@@ -1376,8 +1369,7 @@ public class EvolutionConditions
         var pushan01 = new EvolutionCondition(Names.Pushan)
         {
             Tier = tier3,
-            RequiredGender = Gender.Male,
-            RequiredClass = Classes.Ranger,
+            PlayerCharacterRequirements = new PlayerCharacter(PlayerCharacter.Classes.Ranger, PlayerCharacter.Genders.Male),
             RequiredSectionId = new List<SectionIDs> {SectionIDs.Viridia, SectionIDs.Bluefull, SectionIDs.Redria, SectionIDs.Whitill},
             AreStatsRequired = true,
             IsBasicStatComparisonRequired = false,
@@ -1397,8 +1389,7 @@ public class EvolutionConditions
         var pushan02 = new EvolutionCondition(Names.Pushan)
         {
             Tier = tier3,
-            RequiredGender = Gender.Male,
-            RequiredClass = Classes.Ranger,
+            PlayerCharacterRequirements = new PlayerCharacter(PlayerCharacter.Classes.Ranger, PlayerCharacter.Genders.Male),
             RequiredSectionId = new List<SectionIDs> {SectionIDs.Greenill, SectionIDs.Purplenum, SectionIDs.Oran},
             AreStatsRequired = true,
             IsBasicStatComparisonRequired = false,
@@ -1418,8 +1409,7 @@ public class EvolutionConditions
         var pushan03 = new EvolutionCondition(Names.Pushan)
         {
             Tier = tier3,
-            RequiredGender = Gender.Male,
-            RequiredClass = Classes.Ranger,
+            PlayerCharacterRequirements = new PlayerCharacter(PlayerCharacter.Classes.Ranger, PlayerCharacter.Genders.Male),
             RequiredSectionId = new List<SectionIDs> {SectionIDs.Skyly, SectionIDs.Pinkal, SectionIDs.Yellowboze},
             AreStatsRequired = true,
             IsBasicStatComparisonRequired = false,
@@ -1439,8 +1429,7 @@ public class EvolutionConditions
         var rati01 = new EvolutionCondition(Names.Rati)
         {
             Tier = tier3,
-            RequiredGender = Gender.Male,
-            RequiredClass = Classes.Hunter,
+            PlayerCharacterRequirements = new PlayerCharacter(PlayerCharacter.Classes.Hunter, PlayerCharacter.Genders.Male),
             RequiredSectionId = new List<SectionIDs> {SectionIDs.Greenill, SectionIDs.Purplenum, SectionIDs.Oran},
             AreStatsRequired = true,
             IsBasicStatComparisonRequired = false,
@@ -1460,8 +1449,7 @@ public class EvolutionConditions
         var rati02 = new EvolutionCondition(Names.Rati)
         {
             Tier = tier3,
-            RequiredGender = Gender.Male,
-            RequiredClass = Classes.Hunter,
+            PlayerCharacterRequirements = new PlayerCharacter(PlayerCharacter.Classes.Hunter, PlayerCharacter.Genders.Male),
             RequiredSectionId = new List<SectionIDs> {SectionIDs.Skyly, SectionIDs.Pinkal, SectionIDs.Yellowboze},
             AreStatsRequired = true,
             IsBasicStatComparisonRequired = false,
@@ -1481,8 +1469,7 @@ public class EvolutionConditions
         var rukimin01 = new EvolutionCondition(Names.Rukmin)
         {
             Tier = tier3,
-            RequiredGender = Gender.Female,
-            RequiredClass = Classes.Ranger,
+            PlayerCharacterRequirements = new PlayerCharacter(PlayerCharacter.Classes.Ranger, PlayerCharacter.Genders.Female),
             RequiredSectionId = new List<SectionIDs> {SectionIDs.Viridia, SectionIDs.Bluefull, SectionIDs.Redria, SectionIDs.Whitill},
             AreStatsRequired = true,
             IsBasicStatComparisonRequired = false,
@@ -1502,8 +1489,7 @@ public class EvolutionConditions
         var rukimin02 = new EvolutionCondition(Names.Rukmin)
         {
             Tier = tier3,
-            RequiredGender = Gender.Female,
-            RequiredClass = Classes.Ranger,
+            PlayerCharacterRequirements = new PlayerCharacter(PlayerCharacter.Classes.Ranger, PlayerCharacter.Genders.Female),
             RequiredSectionId = new List<SectionIDs> {SectionIDs.Greenill, SectionIDs.Purplenum, SectionIDs.Oran},
             AreStatsRequired = true,
             IsBasicStatComparisonRequired = false,
@@ -1523,8 +1509,7 @@ public class EvolutionConditions
         var sato = new EvolutionCondition(Names.Sato)
         {
             Tier = tier3,
-            RequiredGender = Gender.Female,
-            RequiredClass = Classes.Force,
+            PlayerCharacterRequirements = new PlayerCharacter(PlayerCharacter.Classes.Force, PlayerCharacter.Genders.Female),
             RequiredSectionId = new List<SectionIDs> {SectionIDs.Viridia, SectionIDs.Bluefull, SectionIDs.Redria, SectionIDs.Whitill},
             AreStatsRequired = true,
             IsBasicStatComparisonRequired = false,
@@ -1544,8 +1529,7 @@ public class EvolutionConditions
         var savitri01 = new EvolutionCondition(Names.Savitri)
         {
             Tier = tier3,
-            RequiredGender = Gender.Female,
-            RequiredClass = Classes.Hunter,
+            PlayerCharacterRequirements = new PlayerCharacter(PlayerCharacter.Classes.Hunter, PlayerCharacter.Genders.Female),
             RequiredSectionId = new List<SectionIDs> {SectionIDs.Viridia, SectionIDs.Bluefull, SectionIDs.Redria, SectionIDs.Whitill},
             AreStatsRequired = true,
             IsBasicStatComparisonRequired = false,
@@ -1565,8 +1549,7 @@ public class EvolutionConditions
         var savitri02 = new EvolutionCondition(Names.Savitri)
         {
             Tier = tier3,
-            RequiredGender = Gender.Female,
-            RequiredClass = Classes.Hunter,
+            PlayerCharacterRequirements = new PlayerCharacter(PlayerCharacter.Classes.Hunter, PlayerCharacter.Genders.Female),
             RequiredSectionId = new List<SectionIDs> {SectionIDs.Greenill, SectionIDs.Purplenum, SectionIDs.Oran},
             AreStatsRequired = true,
             IsBasicStatComparisonRequired = false,
@@ -1586,8 +1569,7 @@ public class EvolutionConditions
         var savitri03 = new EvolutionCondition(Names.Savitri)
         {
             Tier = tier3,
-            RequiredGender = Gender.Female,
-            RequiredClass = Classes.Hunter,
+            PlayerCharacterRequirements = new PlayerCharacter(PlayerCharacter.Classes.Hunter, PlayerCharacter.Genders.Female),
             RequiredSectionId = new List<SectionIDs> {SectionIDs.Skyly, SectionIDs.Pinkal, SectionIDs.Yellowboze},
             AreStatsRequired = true,
             IsBasicStatComparisonRequired = false,

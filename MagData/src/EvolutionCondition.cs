@@ -8,8 +8,7 @@ public class EvolutionCondition
     }
 
     public Names EvolutionMag = Names.None;
-    public Classes RequiredClass = Classes.None;
-    public Gender RequiredGender = Gender.None;
+    public PlayerCharacter PlayerCharacterRequirements = new PlayerCharacter();
     public Names RequiredMag = Names.None;
     public List<SectionIDs> RequiredSectionId = new List<SectionIDs>();
 
@@ -59,9 +58,9 @@ public class EvolutionCondition
         public int Value { get; set; }
     }
 
-    public bool AreConditionsFulfilled(Mag mag, Classes currentClass, SectionIDs currentSectionId)
+    public bool AreConditionsFulfilled(Mag mag, PlayerCharacter playerCharacter)
     {
-        if (!CheckRequiredCharacterLevel(100))
+        if (!CheckRequiredCharacterLevel(playerCharacter.Level))
         {
             return false;
         }
@@ -76,17 +75,17 @@ public class EvolutionCondition
             return false;
         }
 
-        if (!CheckClass(currentClass))
+        if (!CheckClass(playerCharacter.Class))
         {
             return false;
         }
 
-        if (!CheckGender(Gender.None))
+        if (!CheckGender(playerCharacter.Gender))
         {
             return false;
         }
 
-        if (!CheckSectionId(currentSectionId))
+        if (!CheckSectionId(playerCharacter.SectionId))
         {
             return false;
         }
@@ -151,24 +150,24 @@ public class EvolutionCondition
         return RequiredMag == Names.None || RequiredMag == currentMag;
     }
 
-    private bool CheckClass(Classes currentClass)
+    private bool CheckClass(PlayerCharacter.Classes currentClass)
     {
-        if (RequiredClass == Classes.None)
+        if (PlayerCharacterRequirements.Class == PlayerCharacter.Classes.None)
         {
             return true;
         }
 
-        return RequiredClass == currentClass;
+        return PlayerCharacterRequirements.Class == currentClass;
     }
 
-    private bool CheckGender(Gender currentGender)
+    private bool CheckGender(PlayerCharacter.Genders currentGender)
     {
-        if (RequiredGender == Gender.None)
+        if (PlayerCharacterRequirements.Gender == PlayerCharacter.Genders.None)
         {
             return true;
         }
 
-        return RequiredGender == currentGender;
+        return PlayerCharacterRequirements.Gender == currentGender;
     }
 
     private bool CheckSectionId(SectionIDs currentSectionId)
