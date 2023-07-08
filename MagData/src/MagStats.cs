@@ -30,6 +30,8 @@ public class MagStats
         Pow,
         Dex,
         Mind,
+        Synchro,
+        Iq,
     }
 
     // For serialization
