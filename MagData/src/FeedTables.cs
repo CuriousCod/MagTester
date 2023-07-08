@@ -5,37 +5,28 @@ namespace MagData;
 public class FeedTable
 {
     public int Index => FeedTables.TableIndex(this); // TODO Optimize this
-    public List<ItemData> ItemFeedData { get; set; }
-    public FeedTable(List<ItemData> itemFeedData)
+    public List<Items.Data> ItemFeedData { get; set; }
+    public FeedTable(List<Items.Data> itemFeedData)
     {
         ItemFeedData = itemFeedData;
     }
 
-    public class ItemData
+    public Items.Data GetItemData(Items.Names names)
     {
-        public Items Item { get; set; }
-        public ItemStats ItemStats { get; set; }
-
-        public ItemData(Items item, ItemStats itemStats)
-        {
-            Item = item;
-            ItemStats = itemStats;
-        }
-    }
-
-    public ItemData GetItemData(Items item)
-    {
-        var result = ItemFeedData.Find(x => x.Item == item);
+        var result = ItemFeedData.Find(x => x.Names == names);
 
         if (result == null)
         {
-            throw new Exception($"Item {item} not found in feed table.");
+            throw new Exception($"Item {names} not found in feed table.");
         }
 
         return result;
     }
 }
 
+/// <summary>
+/// Serializable container for FeedTables
+/// </summary>
 public class FeedTablesContainer
 {
     public List<FeedTable> FeedTables { get; set; }
@@ -60,21 +51,25 @@ public static class FeedTables
         }
     }
 
+    /// <summary>
+    /// Backup feed table in case the definition file is missing
+    /// </summary>
+    /// <returns></returns>
     private static FeedTable DefaultFeedTable()
     {
-        var monomate = new FeedTable.ItemData(Items.Monomate, new ItemStats(5, 40, 5, 0, 3, 3));
-        var dimate = new FeedTable.ItemData(Items.Dimate, new ItemStats(10, 45, 5, 0, 3, 3));
-        var trimate = new FeedTable.ItemData(Items.Trimate, new ItemStats(15, 50, 10, 0, 4, 4));
-        var monofluid = new FeedTable.ItemData(Items.Monofluid, new ItemStats(5, 0, 5, 40, 3, 3));
-        var difluid = new FeedTable.ItemData(Items.Difluid, new ItemStats(10, 0, 5, 45, 3, 3));
-        var trifluid = new FeedTable.ItemData(Items.Trifluid, new ItemStats(15, 0, 10, 50, 4, 4));
-        var antidote = new FeedTable.ItemData(Items.Antidote, new ItemStats(5, 10, 40, 0, 3, 3));
-        var antiparalysis = new FeedTable.ItemData(Items.Antiparalysis, new ItemStats(5, 0, 44, 10, 3, 3));
-        var solAtomizer = new FeedTable.ItemData(Items.SolAtomizer, new ItemStats(15, 30, 15, 25, 4, 1));
-        var moonAtomizer = new FeedTable.ItemData(Items.MoonAtomizer, new ItemStats(15, 25, 15, 30, 4, 1));
-        var starAtomizer = new FeedTable.ItemData(Items.StarAtomizer, new ItemStats(25, 25, 25, 25, 6, 5));
+        var monomate = new Items.Data(Items.Names.Monomate, new Items.Stats(5, 40, 5, 0, 3, 3));
+        var dimate = new Items.Data(Items.Names.Dimate, new Items.Stats(10, 45, 5, 0, 3, 3));
+        var trimate = new Items.Data(Items.Names.Trimate, new Items.Stats(15, 50, 10, 0, 4, 4));
+        var monofluid = new Items.Data(Items.Names.Monofluid, new Items.Stats(5, 0, 5, 40, 3, 3));
+        var difluid = new Items.Data(Items.Names.Difluid, new Items.Stats(10, 0, 5, 45, 3, 3));
+        var trifluid = new Items.Data(Items.Names.Trifluid, new Items.Stats(15, 0, 10, 50, 4, 4));
+        var antidote = new Items.Data(Items.Names.Antidote, new Items.Stats(5, 10, 40, 0, 3, 3));
+        var antiparalysis = new Items.Data(Items.Names.Antiparalysis, new Items.Stats(5, 0, 44, 10, 3, 3));
+        var solAtomizer = new Items.Data(Items.Names.SolAtomizer, new Items.Stats(15, 30, 15, 25, 4, 1));
+        var moonAtomizer = new Items.Data(Items.Names.MoonAtomizer, new Items.Stats(15, 25, 15, 30, 4, 1));
+        var starAtomizer = new Items.Data(Items.Names.StarAtomizer, new Items.Stats(25, 25, 25, 25, 6, 5));
 
-        var itemData = new List<FeedTable.ItemData>
+        var itemData = new List<Items.Data>
         {
             monomate,
             dimate,
@@ -101,7 +96,7 @@ public static class FeedTables
 
         if (_feedTablesList.Count == 0)
         {
-            return tableIndex == 0 ? DefaultFeedTable() : new FeedTable(new List<FeedTable.ItemData>());
+            return tableIndex == 0 ? DefaultFeedTable() : new FeedTable(new List<Items.Data>());
         }
 
         return tableIndex switch

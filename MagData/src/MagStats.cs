@@ -62,7 +62,7 @@ public class MagStats
         Tier = tier;
     }
 
-    public bool AddStats(ItemStats itemStats)
+    public bool AddStats(Items.Stats itemStats)
     {
         DefCounter += itemStats.Def;
         PowCounter += itemStats.Pow;

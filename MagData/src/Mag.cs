@@ -24,11 +24,11 @@ public class Mag
         FeedTable = feedTable;
     }
 
-    public bool Feed(Items item, Classes currentClass)
+    public bool Feed(Items.Names names, Classes currentClass)
     {
-        var itemGain = FeedTable.GetItemData(item);
+        var itemGain = FeedTable.GetItemData(names);
 
-        var levelUp = MagStats.AddStats(itemGain.ItemStats);
+        var levelUp = MagStats.AddStats(itemGain.Stats);
 
         if (levelUp)
         {
@@ -156,6 +156,6 @@ public class Mag
 
     public static List<string> GetFeedItemNames()
     {
-        return Enum.GetNames(typeof(Items)).ToList();
+        return Enum.GetNames(typeof(Items.Names)).ToList();
     }
 }
