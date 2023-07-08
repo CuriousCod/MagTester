@@ -1,10 +1,12 @@
 using System.Text.Json;
+using System.Text.Json.Serialization;
 
 namespace MagData;
 
 public class FeedTable
 {
-    public int Index => FeedTables.TableIndex(this); // TODO Optimize this
+    public int Index { get; set; }
+    // ReSharper disable once MemberCanBePrivate.Global
     public List<Items.Data> ItemFeedData { get; set; }
     public FeedTable(List<Items.Data> itemFeedData)
     {
@@ -91,7 +93,7 @@ public static class FeedTables
     {
         if (_feedTablesList.Count == 0)
         {
-            _feedTablesList = GetFeedTables();
+            SetFeedTables(GetFeedTables());
         }
 
         if (_feedTablesList.Count == 0)
@@ -117,10 +119,5 @@ public static class FeedTables
     {
         _feedTablesList = feedTables;
         return true;
-    }
-
-    public static int TableIndex(FeedTable feedTable)
-    {
-        return _feedTablesList.IndexOf(feedTable);
     }
 }
