@@ -43,9 +43,36 @@ public class PlayerCharacter
 
     public enum Genders
     {
-        None,
+        None = -1,
         Male,
         Female
+    }
+
+    public static List<string> GetClassNames()
+    {
+        var classNames = Enum.GetNames(typeof(PlayerCharacter.Classes));
+
+        classNames = classNames.Take(classNames.Length - 1).ToArray();
+
+        return classNames.ToList();
+    }
+
+    public static List<string> GetGenderNames()
+    {
+        var genderNames = Enum.GetNames(typeof(PlayerCharacter.Genders));
+
+        genderNames = genderNames.Take(genderNames.Length - 1).ToArray();
+
+        return genderNames.ToList();
+    }
+
+    public static List<string> GetSectionIdNames()
+    {
+        var sectionIdNames = Enum.GetNames(typeof(SectionIDs));
+
+        sectionIdNames = sectionIdNames.Take(sectionIdNames.Length - 1).ToArray();
+
+        return sectionIdNames.ToList();
     }
 }
 

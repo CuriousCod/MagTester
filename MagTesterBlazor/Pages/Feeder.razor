@@ -19,6 +19,30 @@
 
 <p></p>
 
+<select class="form-control" @bind="SelectedGender">
+    <option value="">Select gender</option>
+    @foreach (var item in Genders)
+    {
+        <option @key=item>@item</option>
+    }
+</select>
+
+@genderText
+
+<p></p>
+
+<select class="form-control" @bind="SelectedSectionId">
+    <option value="">Select section ID</option>
+    @foreach (var item in SectionIDs)
+    {
+        <option @key=item>@item</option>
+    }
+</select>
+
+@sectionIdText
+
+<p></p>
+
 <select class="form-control" @bind="SelectedItem">
     <option value="">Select an item</option>
     @foreach (var item in FeedableItems)
@@ -27,12 +51,12 @@
     }
 </select>
 
+@itemText
+
 <p></p>
 
 <button class="btn btn-primary" @onclick="Feed">Feed</button>
 <button class="btn btn-primary" @onclick="() => FeedMultiple(10)">Feed 10</button>
-
-@itemText
 
 <h2>Stats</h2>
 <p>NAME: @_mag.Name</p>
@@ -80,18 +104,26 @@
 
 @code {
 
-    private List<string> Classes = Mag.GetClassNames();
+    private List<string> Classes = PlayerCharacter.GetClassNames();
+    private List<string> Genders = PlayerCharacter.GetGenderNames();
+    private List<string> SectionIDs = PlayerCharacter.GetSectionIdNames();
     private List<string> FeedableItems = Mag.GetFeedItemNames();
 
     private string SelectedItem { get; set; }
     private string SelectedClass { get; set; }
+    private string SelectedGender { get; set; }
+    private string SelectedSectionId { get; set; }
 
     private string classText = string.Empty;
+    private string genderText = string.Empty;
+    private string sectionIdText = string.Empty;
     private string itemText = string.Empty;
 
     private string buildDate = string.Empty;
 
     private Mag? _mag = Mag.GetDefaultMag();
+
+    private PlayerCharacter _playerCharacter = new PlayerCharacter();
 
     protected override async Task OnInitializedAsync()
     {
@@ -116,6 +148,8 @@
     private void Feed()
     {
         classText = string.Empty;
+        genderText = string.Empty;
+        sectionIdText = string.Empty;
         itemText = string.Empty;
 
         if (string.IsNullOrEmpty(SelectedClass))
@@ -123,6 +157,36 @@
             classText = "Please select a class";
             return;
         }
+
+        var classIndex = Classes.IndexOf(SelectedClass);
+
+        if (classIndex == -1)
+        {
+            classText = "Please select a class";
+            return;
+        }
+
+        var classType = (PlayerCharacter.Classes)classIndex;
+
+        var genderIndex = Genders.IndexOf(SelectedGender);
+
+        if (genderIndex == -1)
+        {
+            genderText = "Please select a gender";
+            return;
+        }
+
+        var genderType = (PlayerCharacter.Genders) genderIndex;
+
+        var sectionIdIndex = SectionIDs.IndexOf(SelectedSectionId);
+
+        if (sectionIdIndex == -1)
+        {
+            sectionIdText = "Please select a section ID";
+            return;
+        }
+
+        var sectionIdType = (SectionIDs) sectionIdIndex;
 
         if (string.IsNullOrEmpty(SelectedItem))
         {
@@ -138,17 +202,12 @@
             return;
         }
 
-        var classIndex = Classes.IndexOf(SelectedClass);
+        _playerCharacter.Class = classType;
+        _playerCharacter.Gender = genderType;
+        _playerCharacter.SectionId = sectionIdType;
+        _playerCharacter.Level = 200;
 
-        if (classIndex == -1)
-        {
-            classText = "Please select a class";
-            return;
-        }
-
-        var classType = (PlayerCharacter.Classes)classIndex;
-
-        var result = _mag.Feed((Items.Names)index, new PlayerCharacter(classType));
+        var result = _mag.Feed((Items.Names)index, _playerCharacter);
     }
 
     private void FeedMultiple(int amount)

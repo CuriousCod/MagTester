@@ -72,15 +72,6 @@ public class Mag
         return new Mag(name, stats, feedTable, MagData.EvolutionConditions.GetEvolutionConditionsForMag(name));
     }
 
-    public static List<string> GetClassNames()
-    {
-        var classNames = Enum.GetNames(typeof(PlayerCharacter.Classes));
-
-        classNames = classNames.Take(classNames.Length - 1).ToArray();
-
-        return classNames.ToList();
-    }
-
     public static List<string> GetFeedItemNames()
     {
         return Enum.GetNames(typeof(Items.Names)).ToList();
